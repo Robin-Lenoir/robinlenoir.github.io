@@ -172,7 +172,9 @@ nav a.active::before {
     object-fit: cover;
     filter: grayscale(30%);
     flex-shrink: 0;
-    margin-left: auto;
+    position: relative;
+        left: -50px; /* Adjust this value to move Left */
+        top: 15px;    /* Adjust this value to move Down */
 }
 
 #profile {
@@ -406,6 +408,8 @@ footer {
     .profile-photo {
         width: 150px;
         height: 150px;
+        position: static;
+        margin-top: 1rem;
     }
 }
 
@@ -420,7 +424,6 @@ footer {
         padding: 0.5rem 0;
     }
 
-    /* Adjust numbered list on mobile */
     ol.paper-list li {
         padding-left: 2rem;
     }
@@ -437,7 +440,6 @@ footer {
         font-size: 0.9em;
     }
 
-    /* Keep bracketed links inline on mobile */
     .paper-links {
         font-size: 0.9em;
     }
