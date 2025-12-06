@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robin Lenoir - Research</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html" class="active">Research</a>
+        <!-- <a href="teaching.html">Teaching</a> -->
+    </nav>
+
+    <main>
+        <!-- <h1>Research</h1> -->
+
+        <section id="working-papers">
+            <h2>Working Papers</h2>
+
+            <ol class="paper-list">
+                <li class="paper">
+                    <span class="paper-title">"The Social Determinants of Bank Runs"</span><br>
+                    Robin Lenoir<br>
+                    <em>November 2025</em><br>
+                    <span class="paper-links">
+                        [<a href="files/public/papers/social_bank_runs.pdf">PDF</a>]
+                    </span>
+                    <details class="inline-abstract">
+                        <summary>[Abstract]</summary>
+                        <p>
+                            Motivated by new evidence from the 2023 U.S. regional bank crisis, I develop a theory of how depositor social structure influences bank runs. Rumors about bank financial health spread via interpersonal communication, triggering withdrawals that may lead to collapse. I show that the occurrence, speed, and scale of runs depend on depositor connectedness—the likelihood that agents know and communicate with each other. Higher connectedness accelerates information spread, making runs faster and more severe. In contrast, dispersed depositor bases slow down runs, and can even prevent them entirely.
+                        </p>
+                    </details>
+                </li>
+
+                <li class="paper">
+                    <span class="paper-title">"The Burden of Proof: Fact-Checking and Credibility in Communication Networks"</span><br>
+                    Robin Lenoir<br>
+                    <em>November 2020</em><br>
+                    <span class="paper-links">
+                        <!-- [<a href="files/public/papers/burden_of_proof_rl.pdf">PDF</a>] -->
+                    </span>
+                    <details class="inline-abstract">
+                        <summary>[Abstract]</summary>
+                        <p>
+                            Can fact-checking improve communication in a network? I study a communication network where agents can publicly commit ex-ante to fact-check any message they send with a reliability of their choice. I show that truth-seeking agents use fact-checking as a device to verify information while biased agents—who want false opinions to spread—use fact-checking as a persuasion device to improve their credibility. I describe how a designer can implement full communication (all messages are trusted and transmitted) by choosing an appropriate cost for fact-checking commitment, to be paid by agents. Finally, I study who carries the "burden of proof"; that which agents bear the necessary fact-checking to ensure sufficient trust in the network. I show that when the cost of fact-checking is low, unbiased agents carry the "burden of proof." Conversely, when the cost is high, biased agents carry it.
+                        </p>
+                    </details>
+                </li>
+            </ol>
+        </section>
+
+        <section id="work-in-progress">
+            <h2>Work in Progress</h2>
+
+            <ol class="wip-list">
+                <li>
+                    <span class="paper-title">"Relationship Dynamics in Over-the-Counter Markets"</span><br>
+                    Robin Lenoir
+                    <details class="inline-abstract">
+                        <summary>[Abstract]</summary>
+                        <p>
+                            I develop a model of relationship dynamics in OTC markets, focusing on how these relationships affect liquidity and trading behavior. Investors facing liquidity shocks trade assets through partners chosen from a personal network of dealers randomly met in the past. Dealers, heterogeneous in their execution speed, compete on fees within the network to secure trades. In equilibrium, investors trade with the fastest dealer in their network, but fees are determined by the speed of the second-fastest dealer. As agents meet new dealers, they can switch to better partners, concentrating trade among the fastest dealers. When trading repeatedly with the same dealer, equilibrium fees decrease over time. I demonstrate how heterogeneity in investor access to the market depends on their network, with those having faster dealers adjusting their asset holdings more after liquidity shocks. Finally, I show that increased dealer competition, captured by the meeting rate of new dealers, increases asset holding dispersion and improves liquidity.
+                        </p>
+                    </details>
+                </li>
+                <li>
+                    <span class="paper-title">"The Heterogeneous Impact of Banking Integration"</span><br>
+                    Robin Lenoir
+                </li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <button id="theme-toggle" aria-label="Toggle theme">
+            <span id="theme-icon">●</span> <span id="theme-label">Auto</span>
+        </button>
+    </footer>
+
+    <script src="theme-toggle.js"></script>
+</body>
+</html>
