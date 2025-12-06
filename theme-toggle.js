@@ -1,8 +1,9 @@
 /**
  * Theme Toggle System
- * - Respects system preference (prefers-color-scheme) by default
+ * - Respects system preference (prefers-color-scheme) by default on first visit
  * - Allows manual override via localStorage
- * - Cycles through: auto → light → dark → auto
+ * - Toggles between light and dark
+ * - Button shows next state (not current state)
  */
 
 (function() {
@@ -14,9 +15,8 @@
     const themeIcon = document.getElementById('theme-icon');
     const themeLabel = document.getElementById('theme-label');
 
-    // Icon and label mappings
+    // Icon and label mappings (for next state display)
     const THEMES = {
-        auto: { icon: '●', label: 'Auto' },
         light: { icon: '○', label: 'Light' },
         dark: { icon: '●', label: 'Dark' }
     };
@@ -30,7 +30,7 @@
     }
 
     /**
-     * Apply theme to document
+     * Apply theme to document and update button to show NEXT state
      * @param {string} theme - 'auto', 'light', or 'dark'
      */
     function applyTheme(theme) {
@@ -42,32 +42,41 @@
             html.setAttribute('data-theme', theme);
         }
 
-        // Update toggle button appearance
+        // Determine what theme is actually active
+        let activeTheme;
+        if (theme === 'auto') {
+            // Check system preference
+            activeTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        } else {
+            activeTheme = theme;
+        }
+
+        // Show the OPPOSITE theme in the button (next state)
+        const nextTheme = (activeTheme === 'dark') ? 'light' : 'dark';
+
+        // Update toggle button appearance to show next state
         if (themeIcon && themeLabel) {
-            themeIcon.textContent = THEMES[theme].icon;
-            themeLabel.textContent = THEMES[theme].label;
+            themeIcon.textContent = THEMES[nextTheme].icon;
+            themeLabel.textContent = THEMES[nextTheme].label;
         }
     }
 
     /**
-     * Cycle to next theme: auto → light → dark → auto
+     * Toggle between light and dark themes
      */
     function cycleTheme() {
         const current = getThemePreference();
-        let next;
 
-        switch(current) {
-            case 'auto':
-                next = 'light';
-                break;
-            case 'light':
-                next = 'dark';
-                break;
-            case 'dark':
-                next = 'auto';
-                break;
-            default:
-                next = 'auto';
+        // Simple toggle between light and dark
+        // If coming from 'auto', determine current state and toggle to opposite
+        let next;
+        if (current === 'auto') {
+            // Check what's currently active and toggle to opposite
+            const isCurrentlyDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            next = isCurrentlyDark ? 'light' : 'dark';
+        } else {
+            // Toggle between saved preferences
+            next = (current === 'dark') ? 'light' : 'dark';
         }
 
         localStorage.setItem(STORAGE_KEY, next);
@@ -94,7 +103,7 @@
     if (window.matchMedia) {
         window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
             if (getThemePreference() === 'auto') {
-                // Re-apply auto theme to pick up new system preference
+                // Re-apply to update button label
                 applyTheme('auto');
             }
         });
