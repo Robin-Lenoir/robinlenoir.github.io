@@ -8,4 +8,12 @@
     <loc>https://robinlenoir.com/research.html</loc>
     <priority>0.9</priority>
   </url>
+  <url>
+    <loc>https://robinlenoir.com/papers/social-determinants-bank-runs.html</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://robinlenoir.com/papers/burden-of-proof.html</loc>
+    <priority>0.8</priority>
+  </url>
 </urlset>
