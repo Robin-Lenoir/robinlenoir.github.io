@@ -1,0 +1,54 @@
+<svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg" font-family="'EB Garamond', Georgia, serif">
+
+  <!-- === Edges (drawn first, behind nodes) === -->
+  <!-- h1 → A (0.6) -->
+  <line x1="190" y1="45" x2="100" y2="60" stroke="#d0d0d0" stroke-width="2.5"/>
+  <text x="140" y="38" text-anchor="middle" font-size="15" fill="#444" font-style="italic">0.6</text>
+
+  <!-- h1 → B (0.4) -->
+  <line x1="310" y1="45" x2="400" y2="60" stroke="#d0d0d0" stroke-width="2.5"/>
+  <text x="360" y="38" text-anchor="middle" font-size="15" fill="#444" font-style="italic">0.4</text>
+
+  <!-- h2 → B (0.5) -->
+  <line x1="390" y1="175" x2="430" y2="92" stroke="#d0d0d0" stroke-width="2.5"/>
+  <text x="422" y="140" text-anchor="start" font-size="15" fill="#444" font-style="italic">0.5</text>
+
+  <!-- h2 → C (0.5) -->
+  <line x1="355" y1="218" x2="280" y2="283" stroke="#d0d0d0" stroke-width="2.5"/>
+  <text x="330" y="260" text-anchor="start" font-size="15" fill="#444" font-style="italic">0.5</text>
+
+  <!-- h3 → A (0.5) -->
+  <line x1="110" y1="175" x2="70" y2="92" stroke="#d0d0d0" stroke-width="2.5"/>
+  <text x="72" y="140" text-anchor="end" font-size="15" fill="#444" font-style="italic">0.5</text>
+
+  <!-- h3 → C (0.5) -->
+  <line x1="145" y1="218" x2="220" y2="283" stroke="#d0d0d0" stroke-width="2.5"/>
+  <text x="168" y="260" text-anchor="end" font-size="15" fill="#444" font-style="italic">0.5</text>
+
+  <!-- === Location nodes (circles, light blue fill) === -->
+  <circle cx="65" cy="65" r="33" fill="#f0f6fc" stroke="#888" stroke-width="1.5"/>
+  <text x="65" y="73" text-anchor="middle" font-size="26" font-style="italic" fill="#222" font-weight="500">A</text>
+
+  <circle cx="435" cy="65" r="33" fill="#f0f6fc" stroke="#888" stroke-width="1.5"/>
+  <text x="435" y="73" text-anchor="middle" font-size="26" font-style="italic" fill="#222" font-weight="500">B</text>
+
+  <circle cx="250" cy="308" r="33" fill="#f0f6fc" stroke="#888" stroke-width="1.5"/>
+  <text x="250" y="316" text-anchor="middle" font-size="26" font-style="italic" fill="#222" font-weight="500">C</text>
+
+  <!-- === Bank nodes (rounded rectangles, blue border) === -->
+  <!-- h1 (top center, between A and B) -->
+  <rect x="190" y="18" width="120" height="52" rx="6" fill="white" stroke="#2166ac" stroke-width="1.8"/>
+  <text x="250" y="42" text-anchor="middle" font-size="18" fill="#222" font-weight="600">h&#x2081;</text>
+  <text x="250" y="61" text-anchor="middle" font-size="13" fill="#666" font-style="italic">B = 6</text>
+
+  <!-- h2 (right, between B and C) -->
+  <rect x="330" y="172" width="120" height="52" rx="6" fill="white" stroke="#2166ac" stroke-width="1.8"/>
+  <text x="390" y="196" text-anchor="middle" font-size="18" fill="#222" font-weight="600">h&#x2082;</text>
+  <text x="390" y="215" text-anchor="middle" font-size="13" fill="#666" font-style="italic">B = 4</text>
+
+  <!-- h3 (left, between A and C) -->
+  <rect x="50" y="172" width="120" height="52" rx="6" fill="white" stroke="#2166ac" stroke-width="1.8"/>
+  <text x="110" y="196" text-anchor="middle" font-size="18" fill="#222" font-weight="600">h&#x2083;</text>
+  <text x="110" y="215" text-anchor="middle" font-size="13" fill="#666" font-style="italic">B = 2</text>
+
+</svg>

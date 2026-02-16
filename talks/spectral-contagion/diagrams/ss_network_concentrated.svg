@@ -1,0 +1,56 @@
+<svg viewBox="0 0 270 245" xmlns="http://www.w3.org/2000/svg" font-family="'EB Garamond', Georgia, serif">
+
+  <!-- === Edges (drawn first, behind nodes) === -->
+  <!-- h1→A (0.7) -->
+  <line x1="135" y1="36" x2="50" y2="52" stroke="#d0d0d0" stroke-width="2.8"/>
+  <text x="85" y="32" text-anchor="middle" font-size="13" fill="#888" font-style="italic">0.7</text>
+
+  <!-- h1→B (0.2) thin -->
+  <line x1="135" y1="36" x2="220" y2="52" stroke="#e0e0e0" stroke-width="1.0"/>
+
+  <!-- h1→C (0.1) very thin -->
+  <line x1="135" y1="36" x2="135" y2="195" stroke="#ebebeb" stroke-width="0.5"/>
+
+  <!-- h2→A (0.1) very thin -->
+  <line x1="200" y1="128" x2="50" y2="52" stroke="#ebebeb" stroke-width="0.5"/>
+
+  <!-- h2→B (0.8) -->
+  <line x1="200" y1="128" x2="220" y2="52" stroke="#d0d0d0" stroke-width="3.2"/>
+  <text x="222" y="95" text-anchor="start" font-size="13" fill="#888" font-style="italic">0.8</text>
+
+  <!-- h2→C (0.1) very thin -->
+  <line x1="200" y1="128" x2="135" y2="195" stroke="#ebebeb" stroke-width="0.5"/>
+
+  <!-- h3→C (1.0) -->
+  <line x1="70" y1="128" x2="135" y2="195" stroke="#d0d0d0" stroke-width="4.0"/>
+  <text x="88" y="172" text-anchor="end" font-size="13" fill="#888" font-style="italic">1.0</text>
+
+  <!-- === Location circles (on top of edges) === -->
+  <circle cx="50" cy="52" r="26" fill="#f0f6fc" stroke="#888" stroke-width="1.5"/>
+  <text x="50" y="49" text-anchor="middle" font-size="22" font-style="italic" fill="#222" font-weight="500">A</text>
+  <text x="50" y="66" text-anchor="middle" font-size="12" fill="#888">4.6</text>
+
+  <circle cx="220" cy="52" r="26" fill="#f0f6fc" stroke="#888" stroke-width="1.5"/>
+  <text x="220" y="49" text-anchor="middle" font-size="22" font-style="italic" fill="#222" font-weight="500">B</text>
+  <text x="220" y="66" text-anchor="middle" font-size="12" fill="#888">4.4</text>
+
+  <circle cx="135" cy="195" r="26" fill="#f0f6fc" stroke="#888" stroke-width="1.5"/>
+  <text x="135" y="192" text-anchor="middle" font-size="22" font-style="italic" fill="#222" font-weight="500">C</text>
+  <text x="135" y="209" text-anchor="middle" font-size="12" fill="#888">3.0</text>
+
+  <!-- === Bank boxes (on top of edges) === -->
+  <rect x="97" y="4" width="76" height="32" rx="5" fill="white" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="135" y="19" text-anchor="middle" font-size="15" fill="#222" font-weight="600">h&#x2081;</text>
+  <text x="135" y="31" text-anchor="middle" font-size="11" fill="#666" font-style="italic">B = 6</text>
+
+  <rect x="162" y="112" width="76" height="32" rx="5" fill="white" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="200" y="127" text-anchor="middle" font-size="15" fill="#222" font-weight="600">h&#x2082;</text>
+  <text x="200" y="139" text-anchor="middle" font-size="11" fill="#666" font-style="italic">B = 4</text>
+
+  <rect x="32" y="112" width="76" height="32" rx="5" fill="white" stroke="#c0392b" stroke-width="1.6"/>
+  <text x="70" y="127" text-anchor="middle" font-size="15" fill="#222" font-weight="600">h&#x2083;</text>
+  <text x="70" y="139" text-anchor="middle" font-size="11" fill="#666" font-style="italic">B = 2</text>
+
+  <!-- Title -->
+  <text x="135" y="242" text-anchor="middle" font-size="14" fill="#c0392b" font-weight="600" font-style="italic">Concentrated</text>
+</svg>

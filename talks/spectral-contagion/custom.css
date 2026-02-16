@@ -1,0 +1,523 @@
+/* ============================================
+   Custom CSS for "Capital Reallocation and Bank Lending Networks"
+   org-reveal presentation — 1920×1080 target
+   ============================================ */
+
+/* ── Google Fonts fallback for Linux ── */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
+
+/* ── Color palette (consistent with TikZ diagrams) ── */
+:root {
+  --blue:   #2166ac;  /* internal margin / portfolio / γ */
+  --orange: #e08214;  /* external margin / leverage / λ */
+  --red:    #b2182b;  /* shock / fragile / soft modes */
+  --green:  #1b7837;  /* robust / stiff modes */
+  --purple: #7b2d8e;  /* definitions / equilibrium */
+  --gray:   #666666;  /* benchmark / neutral */
+  --lightgray: #f5f5f5;
+  --darktext: #222222;
+}
+
+/* ── Base typography (serif, academic look) ── */
+.reveal {
+  font-family: "EB Garamond", "Palatino Linotype", Palatino, "Book Antiqua", "Georgia", serif;
+  font-size: 34px;
+  line-height: 1.45;
+  color: var(--darktext);
+}
+
+.reveal h1 {
+  font-size: 2.2em;
+  font-weight: 700;
+  margin-bottom: 0.4em;
+}
+
+.reveal h2 {
+  font-size: 1.4em;
+  font-weight: 600;
+  margin: 0 0 0.5em 0;
+  color: var(--darktext);
+  border-bottom: 1.5px solid #ddd;
+  padding-bottom: 0.15em;
+}
+
+.reveal h3 {
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #444;
+  margin-bottom: 0.3em;
+}
+
+/* ── Slide layout & overflow fixes ── */
+/* Force top-alignment: override reveal.js default vertical centering.
+   This ensures h2 titles stay at a fixed position regardless of content. */
+.reveal .slides section {
+  text-align: left;
+  padding: 1em 1.4em;
+  box-sizing: border-box;
+  overflow: hidden;
+  /* Pin content to top — prevents title position from shifting */
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  height: 100%;
+}
+
+.reveal .slides section * {
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+/* Center-slide exception: title slide uses centered layout */
+.reveal .slides section.center-slide {
+  text-align: center;
+  justify-content: center !important;
+}
+
+/* .notitle slides: add top padding to match the space the h2 would occupy,
+   so the content body starts at the same vertical position */
+.reveal .slides section.notitle {
+  padding-top: calc(1em + 1.4em * 1.45 + 0.5em + 0.15em + 1.5px);
+  /* = section padding + h2 font-size×line-height + h2 margin-bottom + padding-bottom + border */
+}
+
+/* Prevent content overflow */
+.reveal .slides section table,
+.reveal .slides section .katex-display {
+  max-width: 100%;
+}
+
+/* ── .notitle: hide h2 on slides that don't need visible titles ── */
+.notitle h2 {
+  display: none !important;
+}
+
+/* ── .title-as-text: demote heading to body-text styling ── */
+.title-as-text h2 {
+  font-size: 1em;
+  font-weight: 400;
+  border-bottom: none;
+  margin: 0 0 0.3em 0;
+  padding-bottom: 0;
+}
+
+/* ── Multi-column layouts ── */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5em;
+  align-items: start;
+}
+
+.two-col-60-40 {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 1.5em;
+  align-items: start;
+}
+
+.two-col-65-35 {
+  display: grid;
+  grid-template-columns: 65fr 35fr;
+  gap: 1.5em;
+  align-items: start;
+}
+
+.three-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.2em;
+  align-items: start;
+}
+
+.lit-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 0.6em 1.0em;
+  align-items: start;
+}
+
+.lit-grid .lit-bottom {
+  grid-column: 1 / 4;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.0em;
+  max-width: 66%;
+  margin: 0 auto;
+}
+
+.split-panel {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2em;
+  align-items: center;
+}
+
+/* ── Color utility classes ── */
+.blue    { color: var(--blue); }
+.orange  { color: var(--orange); }
+.red     { color: var(--red); }
+.green   { color: var(--green); }
+.purple  { color: var(--purple); }
+.gray    { color: var(--gray); }
+.dimmed  { opacity: 0.35; }
+
+/* ── Unified Box System ──
+   Base .box class with left-border accent pattern.
+   Variants: .theorem, .definition, .assumption, .remark, .equation
+*/
+.box {
+  border-left: 4px solid var(--gray);
+  border-radius: 0 4px 4px 0;
+  padding: 0.6em 1em;
+  margin: 0.6em 0;
+  font-size: 0.92em;
+}
+
+.box .box-title {
+  font-weight: 700;
+  margin-bottom: 0.3em;
+}
+
+/* Theorem / Result box */
+.box.theorem {
+  border-left-color: var(--red);
+  background: #fbeef0;
+}
+
+/* Definition box */
+.box.definition {
+  border-left-color: var(--purple);
+  background: #f3edf5;
+}
+
+/* Assumption box */
+.box.assumption {
+  border-left-color: var(--orange);
+  background: #fdf3e6;
+}
+
+/* Remark box */
+.box.remark {
+  border-left-color: var(--green);
+  background: #eef6ee;
+}
+
+/* Equation highlight box (full border, centered) */
+.box.equation {
+  border: 2px solid var(--blue);
+  border-radius: 6px;
+  padding: 0.5em 0.8em;
+  margin: 0.5em auto;
+  text-align: center;
+  background: #fafafa;
+  display: inline-block;
+}
+
+/* ── Legacy boxed equations (keep for compatibility) ── */
+.boxed-eq {
+  border: 2.5px solid var(--darktext);
+  border-radius: 6px;
+  padding: 0.5em 0.8em;
+  margin: 0.7em auto;
+  display: inline-block;
+  background: #fafafa;
+}
+
+.boxed-eq.blue-border  { border-color: var(--blue); }
+.boxed-eq.red-border   { border-color: var(--red); }
+
+/* ── Legacy remark-box (still used in some slides) ── */
+.remark-box {
+  background: var(--lightgray);
+  border-left: 4px solid var(--gray);
+  padding: 0.5em 0.8em;
+  margin: 0.5em 0;
+  font-size: 0.88em;
+}
+
+.remark-box.kappa-box {
+  border-left-color: var(--blue);
+  background: #eef4fb;
+}
+
+/* ── Shield / Amplify domain-specific panels ── */
+.shield-panel {
+  border: 2px solid var(--blue);
+  border-radius: 8px;
+  padding: 0.6em;
+  background: #f0f6fc;
+}
+
+.amplify-panel {
+  border: 2px solid var(--orange);
+  border-radius: 8px;
+  padding: 0.6em;
+  background: #fdf3e6;
+}
+
+/* ── Tables ── */
+.reveal table {
+  border-collapse: collapse;
+  margin: 0.5em auto;
+  font-size: 0.85em;
+  max-width: 100%;
+}
+
+.reveal table th {
+  background: var(--lightgray);
+  font-weight: 700;
+  padding: 0.35em 0.7em;
+  border-bottom: 2px solid #999;
+  text-align: left;
+}
+
+.reveal table td {
+  padding: 0.3em 0.7em;
+  border-bottom: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.reveal table tr:last-child td {
+  border-bottom: 2px solid #999;
+}
+
+/* ── Spacing normalization ── */
+.reveal p {
+  margin: 0.4em 0;
+}
+
+.reveal ul, .reveal ol {
+  margin: 0.3em 0;
+}
+
+.reveal li {
+  margin-bottom: 0.2em;
+}
+
+.katex-display {
+  margin: 0.5em 0 !important;
+}
+
+.reveal section img {
+  margin: 0.3em auto;
+}
+
+/* ── Taglines ── */
+.tagline {
+  font-style: italic;
+  font-size: 1.05em;
+  text-align: center;
+  margin-top: 1em;
+  color: #444;
+}
+
+.closing-sentence {
+  font-style: italic;
+  font-size: 1.1em;
+  text-align: center;
+  margin-top: 1em;
+  color: var(--darktext);
+}
+
+/* ── Literature slide ── */
+.lit-column h4 {
+  font-size: 1em;
+  margin-bottom: 0.3em;
+  color: var(--darktext);
+}
+
+.lit-column .contrast {
+  font-style: italic;
+  font-size: 0.82em;
+  color: var(--gray);
+  margin-bottom: 0.4em;
+}
+
+.lit-column ul {
+  font-size: 0.8em;
+  padding-left: 1em;
+  list-style: none;
+}
+
+.lit-column ul li {
+  margin-bottom: 0.2em;
+}
+
+/* ── Question / prominent text ── */
+.research-question {
+  font-style: italic;
+  font-size: 1.3em;
+  text-align: center;
+  margin: 1.5em 0 0.8em 0;
+  color: var(--darktext);
+}
+
+/* ── Placeholder boxes (for data-dependent slides) ── */
+.placeholder-box {
+  border: 2px dashed var(--gray);
+  border-radius: 8px;
+  padding: 2em 1em;
+  text-align: center;
+  color: var(--gray);
+  font-style: italic;
+  background: #fafafa;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Diagram containers ── */
+.diagram-container {
+  text-align: center;
+  margin: 0.5em 0;
+}
+
+.diagram-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+.diagram-caption {
+  font-size: 0.78em;
+  color: var(--gray);
+  text-align: center;
+  margin-top: 0.3em;
+}
+
+/* ── Diagram overlay container (stacked-shifted) ── */
+.diagram-overlay-container {
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+}
+
+.diagram-overlay-container img {
+  position: absolute;
+  top: 0;
+  max-width: 90%;
+  height: auto;
+}
+
+/* ── Fragment tweaks ── */
+.reveal .fragment.semi-fade-out.visible {
+  opacity: 0.3;
+}
+
+/* Cross-out fragment: dims and adds red strikethrough */
+.reveal .fragment.cross-out.visible {
+  opacity: 0.3;
+  text-decoration: line-through;
+  text-decoration-color: var(--red);
+}
+
+/* Fade-up entrance animation */
+.reveal .fragment.fade-up {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.reveal .fragment.fade-up.visible {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Highlight-flash: brief colored pulse to draw attention */
+@keyframes highlight-pulse {
+  0%   { background: transparent; }
+  30%  { background: #fdf3e6; }
+  100% { background: transparent; }
+}
+
+.reveal .fragment.highlight-flash.visible {
+  animation: highlight-pulse 1.2s ease-out;
+  border-radius: 4px;
+}
+
+/* r-stack: ensure proper layering */
+.reveal .r-stack > * {
+  margin: 0;
+}
+
+/* ── Comparison table (hook slide) ── */
+.hook-table td:first-child {
+  font-weight: 700;
+  color: var(--gray);
+  white-space: nowrap;
+}
+
+/* ── Equation blocks with colored terms ── */
+.eq-block {
+  background: var(--lightgray);
+  border-radius: 6px;
+  padding: 0.5em 0.8em;
+  margin: 0.4em 0;
+}
+
+/* ── Legacy theorem box (kept for compat, prefer .box.theorem) ── */
+.theorem-box {
+  border: 2px solid var(--darktext);
+  border-radius: 6px;
+  padding: 0.5em 1em;
+  margin: 0.5em 0;
+  background: #fafafa;
+}
+
+.theorem-box .theorem-title {
+  font-weight: 700;
+  margin-bottom: 0.3em;
+}
+
+/* ── Small supplementary text ── */
+.small-note {
+  font-size: 0.75em;
+  color: var(--gray);
+}
+
+/* ── Title slide ── */
+.title-slide > h2 {
+  display: none;  /* hide org heading text */
+}
+
+.title-slide h1 {
+  font-size: 2.4em;
+  margin-bottom: 0.1em;
+}
+
+.title-slide .subtitle {
+  font-size: 1.1em;
+  color: var(--gray);
+  margin-bottom: 1.5em;
+}
+
+.title-slide .author {
+  font-size: 1.0em;
+}
+
+.title-slide .date {
+  font-size: 0.85em;
+  color: var(--gray);
+}
+
+/* ── Fix reveal.js white theme defaults ── */
+.reveal section img {
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+/* ── KaTeX overrides for presentation ── */
+.katex { font-size: 1.05em !important; }
+
+/* ── Print / PDF overrides ── */
+@media print {
+  .reveal .slides section {
+    page-break-inside: avoid;
+  }
+  .placeholder-box {
+    border-style: solid;
+  }
+}

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Amplify round 1: kappa < 0, phi = [0.537, 0.0399, 0.0166] -->
+<!-- Computed from filrouge_cascade.jl with scale 170.65 units per phi -->
+<svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='187.217566pt' height='167.992122pt' viewBox='-61.699305 -60.706917 187.217566 167.992122'>
+<style>
+  text { font-family: "EB Garamond", "Palatino Linotype", Palatino, Georgia, serif; }
+  .axis-label { font-size: 10px; fill: #666; }
+  .bar-label { font-size: 14px; fill: #666; }
+  .regime-label { font-size: 9px; fill: #e08214; font-variant: small-caps; letter-spacing: 0.5px; }
+  .note-label { font-size: 7.5px; fill: #e08214; font-style: italic; }
+</style>
+<g id='page1'>
+<!-- X axis -->
+<path d='M-61.3008 64.367186H102.4021' stroke='#666' fill='none' stroke-width='.79701'/>
+<path d='M100.84732 62.29297C100.98013 63.07031 102.402008 64.234374 102.792633 64.367186C102.402008 64.496092 100.98013 65.66015 100.84732 66.4375' stroke='#666' fill='none' stroke-width='.6376' stroke-linecap='round' stroke-linejoin='round'/>
+<!-- Y axis -->
+<path d='M-55.63281 106.8867V-48.3125' stroke='#666' fill='none' stroke-width='.79701' stroke-miterlimit='10'/>
+<path d='M-57.70311-46.76175C-56.92576-46.89066-55.7617-48.312531-55.632793-48.703156C-55.503887-48.312531-54.33592-46.89066-53.55857-46.76175' stroke='#666' fill='none' stroke-width='.6376' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/>
+<!-- Y axis label: phi_x -->
+<text x='-58' y='-50' class='axis-label' font-style='italic'>&#x3C6;</text>
+<text x='-52' y='-47' class='axis-label' font-size='7.5px' font-style='italic'>x</text>
+<!-- Bar labels: A, B, C -->
+<text x='-37' y='79' class='bar-label'>A</text>
+<text x='8' y='79' class='bar-label'>B</text>
+<text x='53' y='79' class='bar-label'>C</text>
+<!-- No-network benchmark dashed line -->
+<path d='M-52.79688-15.0039H97.4411' stroke='#666' fill='none' stroke-width='.99628' stroke-miterlimit='10' stroke-dasharray='2.98883 2.98883'/>
+<text x='101' y='-12' class='axis-label' font-size='7.5px'>no-network</text>
+<!-- Bar A: phi=0.537, y_top=-27.274 (orange, strong) -->
+<path d='M-47.128907 64.367186V-27.274H-18.7813V64.367186Z' fill='#e08214'/>
+<path d='M-47.128907 64.367186V-27.274H-18.7813V64.367186Z' stroke='#b36810' fill='none' stroke-width='.49814' stroke-miterlimit='10'/>
+<!-- Bar B: phi=0.0399, y_top=57.558 (orange, lighter) -->
+<path d='M-1.7734 64.367186V57.558H26.5742V64.367186Z' fill='#ecb472'/>
+<path d='M-1.7734 64.367186V57.558H26.5742V64.367186Z' stroke='#b36810' fill='none' stroke-width='.49814' stroke-miterlimit='10'/>
+<!-- Bar C: phi=0.0166, y_top=61.534 (orange, lighter) -->
+<path d='M43.582 64.367186V61.534H71.9301V64.367186Z' fill='#ecb472'/>
+<path d='M43.582 64.367186V61.534H71.9301V64.367186Z' stroke='#b36810' fill='none' stroke-width='.49814' stroke-miterlimit='10'/>
+<!-- Labels -->
+<text x='-45' y='82' class='regime-label'>AMPLIFY</text>
+<text x='3' y='53' class='note-label'>flight</text>
+<text x='48' y='57' class='note-label'>flight</text>
+</g>
+</svg>

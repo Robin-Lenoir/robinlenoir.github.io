@@ -1,0 +1,14 @@
+<svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" font-family="'EB Garamond',Georgia,serif">
+<rect width="280" height="280" fill="white"/>
+<text x="10" y="207.78213128576235" text-anchor="start" font-size="12" fill="#888" font-style="italic">δK/K<tspan baseline-shift="super" font-size="9">FB</tspan> (%)</text>
+<line x1="25" y1="228" x2="265" y2="228" stroke="#bbb" stroke-width="1" stroke-dasharray="4,3"/>
+<rect x="35" y="65.5" width="50" height="162.3" fill="#f0c0c0" stroke="#b2182b" stroke-width="1.5" rx="2"/>
+<text x="60.0" y="60.5" text-anchor="middle" font-size="13" fill="#b2182b" font-weight="600">+93%</text>
+<text x="60.0" y="272" text-anchor="middle" font-size="18" fill="#222" font-style="italic">A</text>
+<rect x="110" y="227.8" width="50" height="7.7" fill="#a8cce8" stroke="#2166ac" stroke-width="1.5" rx="2"/>
+<text x="135.0" y="250.5" text-anchor="middle" font-size="13" fill="#2166ac" font-weight="600">-4.4%</text>
+<text x="135.0" y="272" text-anchor="middle" font-size="18" fill="#222" font-style="italic">B</text>
+<rect x="185" y="227.8" width="50" height="6.1" fill="#a8cce8" stroke="#2166ac" stroke-width="1.5" rx="2"/>
+<text x="210.0" y="248.9" text-anchor="middle" font-size="13" fill="#2166ac" font-weight="600">-3.5%</text>
+<text x="210.0" y="272" text-anchor="middle" font-size="18" fill="#222" font-style="italic">C</text>
+</svg>

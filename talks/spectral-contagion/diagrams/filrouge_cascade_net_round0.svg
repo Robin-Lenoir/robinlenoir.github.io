@@ -1,0 +1,62 @@
+<svg viewBox="0 0 500 350" xmlns="http://www.w3.org/2000/svg"
+     font-family="'EB Garamond',Georgia,serif">
+
+  <!-- Opaque background for r-stack layering -->
+  <rect width="500" height="350" fill="white"/>
+
+  <!-- Edges (muted) -->
+  <line x1="190" y1="45" x2="100" y2="60" stroke="#ddd" stroke-width="2"/>
+  <text x="140" y="38" text-anchor="middle" font-size="14" fill="#bbb" font-style="italic">0.6</text>
+  <line x1="310" y1="45" x2="400" y2="60" stroke="#ddd" stroke-width="2"/>
+  <text x="360" y="38" text-anchor="middle" font-size="14" fill="#bbb" font-style="italic">0.4</text>
+  <line x1="390" y1="175" x2="430" y2="92" stroke="#ddd" stroke-width="2"/>
+  <text x="422" y="140" text-anchor="start" font-size="14" fill="#bbb" font-style="italic">0.5</text>
+  <line x1="355" y1="218" x2="280" y2="283" stroke="#ddd" stroke-width="2"/>
+  <text x="330" y="260" text-anchor="start" font-size="14" fill="#bbb" font-style="italic">0.5</text>
+  <line x1="110" y1="175" x2="70" y2="92" stroke="#ddd" stroke-width="2"/>
+  <text x="72" y="140" text-anchor="end" font-size="14" fill="#bbb" font-style="italic">0.5</text>
+  <line x1="145" y1="218" x2="220" y2="283" stroke="#ddd" stroke-width="2"/>
+  <text x="168" y="260" text-anchor="end" font-size="14" fill="#bbb" font-style="italic">0.5</text>
+
+  <!-- Location circles (colored by φ) -->
+  <circle cx="65" cy="65" r="36" fill="#c76472" stroke="#666" stroke-width="2"/>
+  <text x="65" y="57" text-anchor="middle" font-size="22" font-style="italic"
+        fill="#fff" font-weight="500">A</text>
+  <text x="65" y="80" text-anchor="middle" font-size="15"
+        fill="#fff" font-weight="600">+1.00</text>
+
+  <circle cx="435" cy="65" r="36" fill="#f0f6fc" stroke="#666" stroke-width="2"/>
+  <text x="435" y="57" text-anchor="middle" font-size="22" font-style="italic"
+        fill="#222" font-weight="500">B</text>
+  <text x="435" y="80" text-anchor="middle" font-size="15"
+        fill="#222" font-weight="600">0</text>
+
+  <circle cx="250" cy="308" r="36" fill="#f0f6fc" stroke="#666" stroke-width="2"/>
+  <text x="250" y="300" text-anchor="middle" font-size="22" font-style="italic"
+        fill="#222" font-weight="500">C</text>
+  <text x="250" y="323" text-anchor="middle" font-size="15"
+        fill="#222" font-weight="600">0</text>
+
+  <!-- Bank nodes (muted) -->
+  <rect x="190" y="18" width="120" height="52" rx="6"
+        fill="white" stroke="#ccc" stroke-width="1.2"/>
+  <text x="250" y="42" text-anchor="middle" font-size="16"
+        fill="#aaa" font-weight="600">h&#x2081;</text>
+  <text x="250" y="59" text-anchor="middle" font-size="12"
+        fill="#ccc" font-style="italic">B = 6</text>
+
+  <rect x="330" y="172" width="120" height="52" rx="6"
+        fill="white" stroke="#ccc" stroke-width="1.2"/>
+  <text x="390" y="196" text-anchor="middle" font-size="16"
+        fill="#aaa" font-weight="600">h&#x2082;</text>
+  <text x="390" y="213" text-anchor="middle" font-size="12"
+        fill="#ccc" font-style="italic">B = 4</text>
+
+  <rect x="50" y="172" width="120" height="52" rx="6"
+        fill="white" stroke="#ccc" stroke-width="1.2"/>
+  <text x="110" y="196" text-anchor="middle" font-size="16"
+        fill="#aaa" font-weight="600">h&#x2083;</text>
+  <text x="110" y="213" text-anchor="middle" font-size="12"
+        fill="#ccc" font-style="italic">B = 2</text>
+
+</svg>
