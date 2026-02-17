@@ -32,8 +32,8 @@
 <div class="reveal">
 <div class="slides">
 <section>
-<section id="slide-org3750b55" class="center-slide title-slide">
-<h2 id="org3750b55">Title Slide</h2>
+<section id="slide-orgf5baceb" class="center-slide title-slide">
+<h2 id="orgf5baceb">Title Slide</h2>
 <h1>Capital Reallocation and<br>Bank Lending Networks</h1>
 <p class="author">Robin Lenoir</p>
 <p class="date">NYU &middot; February 2026</p>
@@ -194,8 +194,8 @@ Three channels. Banks can shift their portfolios — redirect capital from other
 </section>
 </section>
 <section>
-<section id="slide-orgdbfef3f" class="notitle" data-transition="none">
-<h2 id="orgdbfef3f">Research question</h2>
+<section id="slide-orgd4b6e3e" class="notitle" data-transition="none">
+<h2 id="orgd4b6e3e">Research question</h2>
 <p style="font-size:1.1em; margin-top:0.8em;">Multi-market banks adjust through two margins:</p>
 <ul style="font-size:1.05em; margin-top:0.2em;">
   <li><span class="blue"><strong>Internal</strong> &mdash; portfolio reallocation</span> (information frictions)</li>
@@ -226,8 +226,8 @@ Three results, each narrowing. First: many architectures are equally efficient i
 </section>
 </section>
 <section>
-<section id="slide-org8c7f893" data-transition="none">
-<h2 id="org8c7f893">Related literature</h2>
+<section id="slide-org9e5023a" data-transition="none">
+<h2 id="org9e5023a">Related literature</h2>
 <div class="lit-grid">
   <!-- Top row: 3 columns -->
   <div class="lit-column fragment" data-fragment-index="1">
@@ -352,8 +352,8 @@ Five strands, three on top, two on the bottom.
 </section>
 </section>
 <section>
-<section id="slide-org1e21525" data-transition="none">
-<h2 id="org1e21525">The model</h2>
+<section id="slide-org53ff74f" class="notitle" data-transition="none">
+<h2 id="org53ff74f">The model</h2>
 <p style="margin-bottom:0.4em;"><strong>Environment:</strong>&ensp; $L$ locations, $N$ banks. Discrete time, no risk.</p>
 
 <div class="fragment eq-block" data-fragment-index="1" style="margin-bottom:0.3em;">
@@ -361,36 +361,32 @@ Five strands, three on top, two on the bottom.
 </div>
 
 <div class="fragment eq-block" data-fragment-index="2" style="margin-bottom:0.3em;">
-  <strong>Bank problem (period $t$):</strong>&ensp; Myopic bank $h$ with deposits $B_h$ and local expertise $\bar{W}_h^{\,t}$. Choose <span class="blue"><strong>where</strong></span> to lend ($\omega$) and <span class="orange"><strong>how much</strong></span> to lever ($\theta$):
+  <strong>Bank problem (period $t$):</strong>&ensp; Myopic bank $h$ with deposits $B_h$ and lending footprint $\bar{W}_h^{\,t} = \omega_h^{t-1}$. Choose <span class="blue"><strong>where</strong></span> to lend ($\omega$) and <span class="orange"><strong>how much</strong></span> to lever ($\theta$):
   $$\max_{\omega_h, \theta_h}\; r + \theta_h \left[\sum_x \omega_{hx}\tilde{\mu}_x - \color{#2166ac}{\gamma \sum_x \omega_{hx} \log \frac{\omega_{hx}}{\bar{W}_{hx}^{\,t}}}\right] - \color{#e08214}{\frac{\lambda}{2}(\theta_h - 1)^2}$$
 </div>
 
-<div class="fragment box definition" data-fragment-index="5" style="font-size:0.88em;">
-  <p class="box-title">Definition (Dynamic Equilibrium)</p>
-  <p>Given $\bar{W}^0$ and parameters $(A, B, \gamma, \lambda)$, a <em>dynamic equilibrium</em> is a sequence $\{\omega^t, \theta^t, \mu^t, r^t\}$ such that:</p>
-  <ol style="margin-top:0.2em; margin-bottom:0;">
-    <li>Banks optimize (problem above)</li>
-    <li>$\sum_h B_h \theta_h \omega_{hx} = A_x - \mu_x \;\;\forall x$ &ensp; (capital clears)</li>
-    <li>$\sum_h B_h(\theta_h - 1) = 0$ &ensp; (bond clears)</li>
-    <li>$\bar{W}^{t+1} = \omega^t$ &ensp; (state transition)</li>
-  </ol>
-</div>
-
-<div class="r-stack" style="min-height:110px; margin-top:auto;">
-  <div class="fragment fade-in-then-out box remark" data-fragment-index="1">
-    <strong>Remark (demand): </strong> $\mu_x$ is the local rate for loans. $A_x$ captures how strong demand is. Linearity is for tractability, working on Cobb-Douglas production function for robustness.   
+<div class="r-stack" style="margin-top:auto;">
+  <div class="fragment fade-in-then-out box remark" data-fragment-index="1" style="align-self:flex-end; width:100%;">
+    <strong>Remark (demand): </strong> $\mu_x$ is the local rate for loans. $A_x$ captures how strong demand is. Linearity is for tractability, working on Cobb-Douglas production function for robustness.
   </div>
-  <div class="fragment fade-in-then-out box remark" data-fragment-index="2">
+  <div class="fragment fade-in-then-out box remark" data-fragment-index="2" style="align-self:flex-end; width:100%;">
     <strong>Remark (KL divergence): </strong> Internal adjustment frictions are captured by the <span class="blue">Kullback-Leibler divergence</span> &mdash; an entropy-based cost of deviating from your natural lending pattern. Standard in the rational inattention literature (Sims 2003; Matejka &amp; McKay 2015).
   </div>
-  <div class="fragment fade-in-then-out box remark" data-fragment-index="3">
+  <div class="fragment fade-in-then-out box remark" data-fragment-index="3" style="align-self:flex-end; width:100%;">
     <strong>Remark (empirics): </strong> Within-bank lending distances flat over 20 years (Adams et al. 2023); banks expand toward markets they know (Casado &amp; Martinez-Miera 2024); peripheral markets cut first in crises (Berrospide et al. 2016).
   </div>
-  <div class="fragment fade-in-then-out box remark" data-fragment-index="4">
+  <div class="fragment fade-in-then-out box remark" data-fragment-index="4" style="align-self:flex-end; width:100%;">
     <strong>Remark (separability): </strong> <span class="blue">Information cost</span> and <span class="orange">financial friction</span> are symmetric in structure. The key assumption is separability &mdash; <em>where</em> to lend and <em>how much</em> to lever are chosen independently.
   </div>
-  <div class="fragment fade-in-then-out box remark" data-fragment-index="5">
-    <strong>Remark (dynamics): </strong> $\bar{W}^{t+1} = \omega^t$ &mdash; <em>"you become what you do."</em> Expertise tomorrow equals portfolio today.
+  <div class="fragment box definition" data-fragment-index="5" style="font-size:0.88em; align-self:flex-end; width:100%;">
+    <p class="box-title">Definition (Dynamic Equilibrium)</p>
+    <p>Given $\bar{W}^0$ and parameters $(A, B, \gamma, \lambda)$, a <em>dynamic equilibrium</em> is a sequence $\{\omega^t, \theta^t, \mu^t, r^t\}$ such that:</p>
+    <ol style="margin-top:0.2em; margin-bottom:0;">
+      <li>Banks optimize (problem above)</li>
+      <li>$\sum_h B_h \theta_h \omega_{hx} = A_x - \mu_x \;\;\forall x$ &ensp; (capital clears)</li>
+      <li>$\sum_h B_h(\theta_h - 1) = 0$ &ensp; (bond clears)</li>
+      <li>$\bar{W}^{t+1} = \omega^t$ &ensp; (state transition)</li>
+    </ol>
   </div>
 </div>
 
@@ -427,10 +423,10 @@ Empirical grounding for KL divergence is in the remarks — cycle through as que
 </section>
 </section>
 <section>
-<section id="slide-org09f5511" class="notitle" data-transition="none">
-<h2 id="org09f5511">Solving the bank problem</h2>
+<section id="slide-orgbe16499" class="notitle" data-transition="none">
+<h2 id="orgbe16499">Solving the bank problem</h2>
 <div class="eq-block" style="font-size:0.85em; margin-bottom:0.4em;">
-  <strong>Bank problem (period $t$):</strong>&ensp; Myopic bank $h$ with deposits $B_h$ and local expertise $\bar{W}_h^{\,t}$. Choose <span class="blue"><strong>where</strong></span> to lend ($\omega$) and <span class="orange"><strong>how much</strong></span> to lever ($\theta$):
+  <strong>Bank problem (period $t$):</strong>&ensp; Myopic bank $h$ with deposits $B_h$ and lending footprint $\bar{W}_h^{\,t} = \omega_h^{t-1}$. Choose <span class="blue"><strong>where</strong></span> to lend ($\omega$) and <span class="orange"><strong>how much</strong></span> to lever ($\theta$):
   $$\max_{\omega_h, \theta_h}\; r + \theta_h \left[\sum_x \omega_{hx}\tilde{\mu}_x - \color{#2166ac}{\gamma \sum_x \omega_{hx} \log \frac{\omega_{hx}}{\bar{W}_{hx}^{\,t}}}\right] - \color{#e08214}{\frac{\lambda}{2}(\theta_h - 1)^2}$$
 </div>
 
@@ -441,14 +437,14 @@ Empirical grounding for KL divergence is in the remarks — cycle through as que
     <ul style="font-size:0.9em;">
       <li>$\Phi_x = \exp(\tilde{\mu}_x / \gamma)$: yield-chasing factor</li>
       <li>$Z_h = \sum_x \bar{W}_{hx}\, \Phi_x$: portfolio normalizer</li>
-      <li>Portfolio value: $V_h = \gamma \log Z_h$</li>
     </ul>
   </div>
   <div class="fragment" data-fragment-index="2">
     <h3>Leverage <span class="orange">(external margin)</span></h3>
     $$\theta_h = 1 + V_h / \lambda$$
     <ul style="font-size:0.9em;">
-      <li>$V_h$ links the two margins: same yield-chasing factors tilt portfolios and determine borrowing</li>
+      <li>Portfolio value: $V_h = \gamma \log Z_h$</li>
+      <li>$V_h$ is a soft-max.</li>
     </ul>
   </div>
 </div>
@@ -492,8 +488,8 @@ ALGEBRA: Portfolio FOC. Maximize over ω subject to Σ ω = 1: L = Σ<sub>x</sub
 </section>
 </section>
 <section>
-<section id="slide-orga19a5fb" class="notitle" data-transition="none">
-<h2 id="orga19a5fb">Equilibrium in \(\Phi\)</h2>
+<section id="slide-org0a116a9" class="notitle" data-transition="none">
+<h2 id="org0a116a9">Equilibrium in \(\Phi\)</h2>
 <div class="fragment box definition" data-fragment-index="1">
   <p class="box-title">Equilibrium characterization &mdash; fixed point in $\Phi$</p>
   <div class="two-col" style="margin-top:0.3em; gap:1em;">
@@ -551,8 +547,8 @@ ALGEBRA: Capital clearing at Φ. Supply at x: K<sub>x</sub><sup>S</sup> = Σ<sub
 </section>
 </section>
 <section>
-<section id="slide-org45f261e" class="notitle" data-transition="none">
-<h2 id="org45f261e">Steady-state theorem</h2>
+<section id="slide-org2d426e9" class="notitle" data-transition="none">
+<h2 id="org2d426e9">Steady-state theorem</h2>
 <div class="fragment box theorem" data-fragment-index="1">
   <p class="box-title">Theorem (Steady States)</p>
   <p>The set of deterministic steady states is:</p>
@@ -567,12 +563,12 @@ ALGEBRA: Capital clearing at Φ. Supply at x: K<sub>x</sub><sup>S</sup> = Σ<sub
 </ul>
 </div>
 
-<div class="r-stack" style="margin-top:auto;">
+<div class="r-stack" style="margin-top:0.1em;">
   <div class="fragment fade-in-then-out" data-fragment-index="5" style="width:100%;">
     <div style="display:flex; justify-content:center; gap:1.2em;">
-      <img src="./diagrams/ss_network_concentrated.svg" style="height:260px;">
-      <img src="./diagrams/ss_network_chain.svg" style="height:260px;">
-      <img src="./diagrams/ss_network_diversified.svg" style="height:260px;">
+      <img src="./diagrams/ss_network_concentrated.svg" style="height:390px;">
+      <img src="./diagrams/ss_network_chain.svg" style="height:390px;">
+      <img src="./diagrams/ss_network_diversified.svg" style="height:390px;">
     </div>
   </div>
   <p class="fragment" data-fragment-index="6" style="font-size:1.5em; font-style:italic; text-align:center; color:var(--red);">Question: do all steady states react the same way after a shock?</p>
@@ -603,79 +599,55 @@ PROOF: (⟹) Suppose W̄ ∈ S (row-stochastic, W<sup>T</sup> B = K<sup>FB</sup>
 </section>
 </section>
 <section>
-<section id="slide-org8603941" class="notitle" data-transition="none">
-<h2 id="org8603941">Linearization &amp; the market matrix</h2>
-<p style="margin-bottom:0.4em;">$\Longrightarrow$ Immediate reaction after a small localized misalignment: $A_x \to A_x + \varepsilon_x$</p>
+<section id="slide-slide-linearization" class="notitle" data-transition="none">
+<h2 id="slide-linearization">Linearization &amp; the market matrix</h2>
+<p style="margin-bottom:0.6em; font-size:1.05em;">Linearize equilibrium around $\Phi^* = \mathbf{1}$ after a small shock: &ensp; $A_x \to A_x + \varepsilon_x$</p>
 
-<div class="fragment box" data-fragment-index="1" style="border-left-color:var(--red); background:#fbeef0;">
-  <p class="box-title" style="color:var(--red);">Linearize equilibrium equations</p>
-  <div class="two-col" style="margin-top:0.3em; gap:1em; font-size:0.88em; text-align:center;">
-    <div>
-      <em>Capital clearing:</em><br>
-      $\sum_h B_h \theta_h(\Phi)\bar{W}_{hx}\Phi_x / Z_h
-      = A_x - r - \gamma \log \Phi_x$
-      <p class="fragment" data-fragment-index="2" style="margin:0.2em 0; color:var(--red); font-size:0.95em;">$\big\downarrow$ <small style="font-size:0.7em; color:#888;">1st order, $\Phi=\mathbf{1}$</small></p>
-      <p class="fragment" data-fragment-index="2" style="margin:0; font-size:0.82em;">$\Big[\,{\color{#4A90D9}{\sum_h B_h \bar{W}_{hx}}} + \gamma\Big]\phi_x + {\color{#9B59B6}{\frac{\gamma\!-\!\lambda}{\lambda}}}{\color{#E8830C}{\sum_y \Big(\sum_h B_h\, \bar{W}_{hx}\bar{W}_{hy}\Big) \phi_y}} = \varepsilon_x - \delta r$</p>
-      <p class="fragment" data-fragment-index="3" style="margin:0.2em 0; color:var(--red); font-size:0.95em;">$\big\downarrow$ <small style="font-size:0.7em; color:#888;">collect terms</small></p>
-      <p class="fragment" data-fragment-index="3" style="margin:0;">$\big({\color{#4A90D9}{K_x^{FB}}}+\gamma\big)\phi_x + {\color{#9B59B6}{\kappa}} {\color{#E8830C}{\sum_y G_{xy}\,\phi_y}} = \varepsilon_x - \delta r$</p>
-    </div>
-    <div>
-      <em>Bond clearing:</em><br>
-      $\sum_h B_h \frac{\gamma}{\lambda} \log Z_h = 0$
-      <p class="fragment" data-fragment-index="2" style="margin:0.2em 0; color:var(--red); font-size:0.95em;">$\big\downarrow$ <small style="font-size:0.7em; color:#888;">$\log Z_h \approx (W\phi)_h$</small></p>
-      <p class="fragment" data-fragment-index="2" style="margin:0; font-size:0.88em;">$\sum_x {\color{#4A90D9}{\sum_h B_h\, \bar{W}_{hx}}}\, \phi_x = 0$</p>
-      <p class="fragment" data-fragment-index="3" style="margin:0.2em 0; color:var(--red); font-size:0.95em;">$\big\downarrow$</p>
-      <p class="fragment" data-fragment-index="3" style="margin:0;">$({\color{#4A90D9}{K^{FB}}})^\top \phi = 0$</p>
-    </div>
-  </div>
-</div>
+<p class="fragment" data-fragment-index="1" style="margin:0 0 0.1em 0; font-size:0.85em; color:#888;">$\phi_x = \Phi_x - 1$: deviation in location yields &emsp;|&emsp; $\delta r$: shift in interbank rate &emsp;|&emsp; <a href="#/linearization-appendix" style="color:#888; text-decoration:underline;">derivation &#x2197;</a></p>
 
-<div class="fragment two-col" data-fragment-index="4" style="margin-top:0.4em; gap:1em; text-align:center;">
-  <div class="boxed-eq red-border" style="position:relative;">
-    <em style="color:var(--red);">Capital market:</em><br>
-    $M\phi = \varepsilon -$ <span style="position:relative; display:inline-block;"><span class="fragment" data-fragment-index="5" style="position:absolute; left:-2px; right:-2px; top:50%; border-top:2.5px solid var(--red);"></span>$\delta r \cdot \mathbf{1}$</span> &emsp; where &ensp; $M = \tilde{D} + \kappa\, G$
+<div class="fragment two-col" data-fragment-index="1" style="margin-top:0.5em; gap:1.2em; text-align:center;">
+  <div class="boxed-eq red-border" style="position:relative; font-size:1.15em; padding:0.6em 0.8em;">
+    <em style="color:var(--red); font-size:0.85em;">Capital market:</em><br>
+    $M\phi = \varepsilon -$ <span style="position:relative; display:inline-block;"><span class="fragment" data-fragment-index="3" style="position:absolute; left:-2px; right:-2px; top:50%; border-top:2.5px solid var(--red);"></span>$\delta r \cdot \mathbf{1}$</span>
   </div>
-  <div class="boxed-eq red-border" style="position:relative;">
-    <em style="color:var(--red);">Bond market:</em><br>
+  <div class="boxed-eq red-border" style="position:relative; font-size:1.15em; padding:0.6em 0.8em;">
+    <em style="color:var(--red); font-size:0.85em;">Bond market:</em><br>
     $(K^{FB})^\top \phi = 0$
-    <div class="fragment" data-fragment-index="5" style="position:absolute; top:0; left:0; right:0; bottom:0; display:flex; align-items:center; justify-content:center; font-size:4em; color:var(--red); font-weight:bold; opacity:0.6;">&#x2717;</div>
+    <div class="fragment" data-fragment-index="3" style="position:absolute; top:0; left:0; right:0; bottom:0; display:flex; align-items:center; justify-content:center; font-size:4em; color:var(--red); font-weight:bold; opacity:0.6;">&#x2717;</div>
   </div>
 </div>
 
-<div class="r-stack" style="margin-top:auto; font-size:0.88em; min-height:140px;">
-  <div style="width:100%;">
-    <div class="fragment box remark" data-fragment-index="2" style="margin:0.2em 0; padding:0.3em 0.8em;">
-      <strong>Wedge:</strong>&ensp; $\phi_x = \Phi_x - 1 = O(\|\varepsilon\|)$ &mdash; linearized deviation in location yields. &ensp; $\delta r$ = shift in interbank rate.
+<div class="fragment" data-fragment-index="2" style="margin-top:0.6em;">
+  <div class="box remark" style="margin:0.3em 0; padding:0.5em 0.9em; font-size:1.05em;">
+    <strong>The market matrix:</strong>&ensp; $M = \underbrace{\tilde{D}}_{\text{local depth}} + \;\underbrace{{\color{#9B59B6}{\kappa}}\; {\color{#E8830C}{G}}}_{\text{network}}$
+    <div style="margin-top:0.4em; display:flex; gap:1.5em; flex-wrap:wrap; font-size:0.93em;">
+      <span>$\tilde{D} = \text{diag}({\color{#4A90D9}{K^{FB}}} + \gamma)$</span>
+      <span>${\color{#E8830C}{G_{xy} = \sum_h B_h\,\bar{W}_{hx}\bar{W}_{hy}}}$ &ensp; <em style="font-size:0.9em;">co-lending overlap</em> &ensp; $(G = W^\top D_B\, W)$</span>
     </div>
-    <div class="fragment box remark" data-fragment-index="3" style="margin:0.2em 0; padding:0.3em 0.8em;">
-      <strong>Notation:</strong>&ensp; ${\color{#4A90D9}{K_x^{FB} \equiv \sum_h B_h\,\bar{W}_{hx}}}$: first-best capital at $x$. &ensp; ${\color{#E8830C}{G_{xy} \equiv \sum_h B_h\,\bar{W}_{hx}\bar{W}_{hy}}}$: co-lending overlap. &ensp; ${\color{#9B59B6}{\kappa \equiv \tfrac{\gamma-\lambda}{\lambda}}}$: friction ratio.
-    </div>
-    <div class="fragment box remark" data-fragment-index="4" style="margin:0.2em 0; padding:0.3em 0.8em;">
-      <strong>Components:</strong>&ensp; $\tilde{D} = \text{diag}(K^{FB} + \gamma)$: local market depth. &ensp; $G = W^\top D_B\, W$: <strong>co-lending overlap matrix</strong> (Gram matrix).
+    <div style="margin-top:0.3em; display:flex; gap:1.5em; flex-wrap:wrap; font-size:0.93em;">
+      <span>${\color{#4A90D9}{K_x^{FB} = \sum_h B_h\,\bar{W}_{hx}}}$: first-best capital at $x$</span>
+      <span>${\color{#9B59B6}{\kappa = \tfrac{\gamma-\lambda}{\lambda}}}$: friction ratio (info vs. financial)</span>
     </div>
   </div>
-  <p class="fragment" data-fragment-index="5" style="font-size:1.2em; text-align:center; color:var(--red); background:white; padding:0.5em; width:100%;"><strong>Today:</strong> focus on partial equilibrium &ensp; $\Longrightarrow\; \delta r = 0$</p>
 </div>
+
+<p class="fragment" data-fragment-index="3" style="margin-top:auto; font-size:1.2em; text-align:center; color:var(--red); padding:0.5em;"><strong>Today:</strong> partial equilibrium &ensp; $\Longrightarrow\; \delta r = 0$ &ensp; $\Longrightarrow\; M\phi = \varepsilon$</p>
 
 <aside class="notes">
 <p>
-I perturb around the steady state. phi<sub>x</sub> measures how far location x's pricing deviates from efficiency. epsilon<sub>x</sub> is the local productivity shock.
+I perturb around the aligned steady state. phi<sub>x</sub> measures how far location x's pricing deviates from efficiency. epsilon<sub>x</sub> is the local productivity shock.
 </p>
 
 <p>
-Start with both clearing conditions. First-order Taylor around the aligned equilibrium — theta is 1 at alignment, so the zeroth order cancels and we're left with these two groups of first-order terms. The blue terms capture how much capital sits at x. The orange terms capture cross-location portfolio rebalancing — banks exposed to both x and y adjust simultaneously.
+The key step: I linearize both clearing conditions — first-order Taylor around Phi = 1. The zeroth order cancels (it's a steady state), so we're left with first-order terms. The algebra is in the appendix slide and in the paper.
 </p>
 
 <p>
-Then we just name things: the blue sum is K-FB, the orange double sum is the Gram matrix G, and the friction ratio is kappa. That gives the compact form.
+The result has a beautiful structure. Everything about propagation lives in one matrix M. Two pieces: D-tilde captures local market depth (how much capital sits at each location), and kappa*G is the network term (how banks' overlapping portfolios transmit shocks across locations).
 </p>
 
 <p>
-Today I focus on partial equilibrium — cross out the bond equation, delta r = 0. This isolates the cross-location propagation without the aggregate interest rate feedback.
-</p>
-
-<p>
-The linearized system is M*phi = epsilon. Everything about propagation lives in this matrix M. Two pieces: D-tilde captures local market depth, and kappa*G is a network term.
+G is the co-lending overlap matrix — a Gram matrix W-transpose D<sub>B</sub> W. Entry G<sub>xy</sub> measures how much locations x and y share the same lenders, weighted by bank size. This is the object we decompose empirically.
 </p>
 
 <p>
@@ -683,15 +655,15 @@ The key parameter is kappa: the percentage by which info friction exceeds financ
 </p>
 
 <p>
-ALGEBRA: Linearize around Φ = 1 (aligned SS). Write Φ<sub>x</sub> = 1 + φ<sub>x</sub>. Key expansions: Z<sub>h</sub> = Σ<sub>x</sub> W̄<sub>hx</sub>(1 + φ<sub>x</sub>) = 1 + (Wφ)<sub>h</sub>. log Z<sub>h</sub> ≈ (Wφ)<sub>h</sub>. V<sub>h</sub> = γ(Wφ)<sub>h</sub>. θ<sub>h</sub> ≈ 1 + (γ/λ)(Wφ)<sub>h</sub>. Φ<sub>x</sub>/Z<sub>h</sub> ≈ 1 + φ<sub>x</sub> − (Wφ)<sub>h</sub>. Product: θ<sub>h</sub> · Φ<sub>x</sub>/Z<sub>h</sub> ≈ 1 + φ<sub>x</sub> + (γ/λ − 1)(Wφ)<sub>h</sub> = 1 + φ<sub>x</sub> + κ(Wφ)<sub>h</sub>, where κ = (γ−λ)/λ. Capital supply (first order): K<sub>x</sub><sup>S</sup> = Σ<sub>h</sub> B<sub>h</sub> W̄<sub>hx</sub> [1 + φ<sub>x</sub> + κ(Wφ)<sub>h</sub>] = K<sub>x</sub><sup>FB</sup> + K<sub>x</sub><sup>FB</sup> φ<sub>x</sub> + κ Σ<sub>h</sub> B<sub>h</sub> W̄<sub>hx</sub> (Wφ)<sub>h</sub>. The network term: Σ<sub>h</sub> B<sub>h</sub> W̄<sub>hx</sub> (Wφ)<sub>h</sub> = Σ<sub>h</sub> B<sub>h</sub> W̄<sub>hx</sub> Σ<sub>y</sub> W̄<sub>hy</sub> φ<sub>y</sub> = Σ<sub>y</sub> [Σ<sub>h</sub> B<sub>h</sub> W̄<sub>hx</sub> W̄<sub>hy</sub>] φ<sub>y</sub> = (Gφ)<sub>x</sub>, defining G<sub>xy</sub> = Σ<sub>h</sub> B<sub>h</sub> W̄<sub>hx</sub> W̄<sub>hy</sub> (Gram matrix, G = W<sup>T</sup> D<sub>B</sub> W). Capital demand: A<sub>x</sub> + ε<sub>x</sub> − (μ<sup>FB</sup> + δr) − γφ<sub>x</sub> = K<sub>x</sub><sup>FB</sup> + ε<sub>x</sub> − δr − γφ<sub>x</sub>. Equate, cancel K<sub>x</sub><sup>FB</sup>: (K<sub>x</sub><sup>FB</sup> + γ)φ<sub>x</sub> + κ(Gφ)<sub>x</sub> = ε<sub>x</sub> − δr. In matrix form: Mφ = ε − δr·1, with M = D̃ + κG, D̃ = diag(K<sup>FB</sup> + γ). Bond market: Σ<sub>h</sub> B<sub>h</sub>(γ/λ)(Wφ)<sub>h</sub> = (γ/λ) Σ<sub>x</sub> K<sub>x</sub><sup>FB</sup> φ<sub>x</sub> = 0 ⟹ (K<sup>FB</sup>)<sup>T</sup> φ = 0.
+Today I focus on partial equilibrium — cross out the bond equation, delta r = 0. This isolates the cross-location propagation without the aggregate interest rate feedback.
 </p>
 
 </aside>
 </section>
 </section>
 <section>
-<section id="slide-org7761f5f" class="notitle" data-transition="none">
-<h2 id="org7761f5f">No-network benchmark</h2>
+<section id="slide-org45579e5" class="notitle" data-transition="none">
+<h2 id="org45579e5">No-network benchmark</h2>
 <p style="margin-bottom:0.4em;"><strong>No-network benchmark:</strong>&ensp; suppose $\kappa = 0$.</p>
 
 <div class="two-col" style="align-items:start; gap:1.5em;">
@@ -715,15 +687,14 @@ ALGEBRA: Linearize around Φ = 1 (aligned SS). Write Φ<sub>x</sub> = 1 + φ<sub
   <!-- RIGHT: consequences → interpretation (r-stack) -->
   <div class="r-stack" style="align-self:start;">
     <div class="fragment fade-in-then-out box remark" data-fragment-index="2" style="font-size:0.88em;">
-      <p class="box-title">Consequences (no network)</p>
-      <ul style="margin:0.2em 0; padding-left:1em; list-style:none;">
-        <li style="margin-bottom:0.4em;">
+      <ul style="margin:0.1em 0; padding-left:1em; list-style:none;">
+        <li style="margin-bottom:0.2em;">
           <strong>Spreads:</strong>&ensp; $\delta\tilde{\mu}_x = (1 - d_x)\,\varepsilon_x$ &ensp; where $d_x = \dfrac{K_x^{FB}}{K_x^{FB}+\gamma}$<br>
           <span style="font-size:0.9em; color:var(--gray);">Only shocked locations affected.</span>
         </li>
         <li style="margin-bottom:0.4em;">
           <strong>Capital:</strong>&ensp; $\delta K_x = d_x\,\varepsilon_x$<br>
-          <span style="font-size:0.9em; color:var(--gray);">Deep markets ($d_x \approx 1$): absorb via capital. Thin ($d_x \approx 0$): absorb via spreads.</span>
+          <span style="font-size:0.9em; color:var(--gray);">Deep markets: absorb via capital. Thin: absorb via spreads.</span>
         </li>
         <li style="margin-bottom:0.4em;">
           <strong>Portfolios:</strong>&ensp; $\delta\omega_{hx} = \bar{W}_{hx}\!\left(\phi_x - \bar{W}_h \cdot \phi\right)$<br>
@@ -731,7 +702,7 @@ ALGEBRA: Linearize around Φ = 1 (aligned SS). Write Φ<sub>x</sub> = 1 + φ<sub
         </li>
         <li>
           <strong>Leverage:</strong>&ensp; $\delta\theta_h = \dfrac{\gamma}{\lambda}\,\bar{W}_h \cdot \phi$<br>
-          <span style="font-size:0.9em; color:var(--gray);">Exposed banks lever up; $\delta\Theta = (\gamma/\lambda)\,d \cdot \varepsilon \neq 0$ absorbed externally.</span>
+          <span style="font-size:0.9em; color:var(--gray);">Exposed banks lever up.</span>
         </li>
       </ul>
       <p style="margin-top:0.3em; font-style:italic;">Each location absorbs its own shock. No cross-location transmission.</p>
@@ -783,8 +754,8 @@ ALGEBRA: At κ = 0, M = D̃ = diag(K<sup>FB</sup> + γ), so φ<sub>x</sub> = ε<
 </section>
 </section>
 <section>
-<section id="slide-org89f0823" class="notitle" data-transition="none">
-<h2 id="org89f0823">What if \(\kappa \neq 0\)</h2>
+<section id="slide-org88471d1" class="notitle" data-transition="none">
+<h2 id="org88471d1">What if \(\kappa \neq 0\)</h2>
 <p style="margin-bottom:0.4em; font-size:1.2em; color:var(--red);"><strong>What if $\kappa \neq 0$?</strong></p>
 
 <div class="two-col" style="align-items:start; gap:1.5em;">
@@ -841,8 +812,8 @@ Transition from benchmark to the full model. Cross out the diagonal shortcut —
 </section>
 </section>
 <section>
-<section id="slide-orgfdb538c" class="notitle" data-transition="none">
-<h2 id="orgfdb538c">The Gram matrix \(G\)</h2>
+<section id="slide-org24766ee" class="notitle" data-transition="none">
+<h2 id="org24766ee">The Gram matrix \(G\)</h2>
 <div class="two-col" style="align-items:start; gap:1.5em;">
   <!-- LEFT: blue definition box + annotated diagram -->
   <div>
@@ -860,7 +831,7 @@ Transition from benchmark to the full model. Cross out the diagonal shortcut —
       </ul>
     </div>
     <div class="fragment diagram-container" data-fragment-index="3" style="margin-top:0.4em;">
-      <img src="./diagrams/filrouge_network_v2.svg" style="max-height:320px;" alt="Annotated network: 3 banks, 3 locations">
+      <img src="./diagrams/filrouge_network_v2.svg" style="max-height:400px;" alt="Annotated network: 3 banks, 3 locations">
     </div>
   </div>
 
@@ -944,10 +915,6 @@ Transition from benchmark to the full model. Cross out the diagonal shortcut —
   </div>
 </div>
 
-<div class="fragment box remark" data-fragment-index="4" style="margin-top:auto; font-size:0.88em;">
-  <strong>Reading $G$:</strong>&ensp; $A$–$B$ strongly linked ($G_{AB}=1.44$, via $h_1$). &ensp; $A$–$C$ weakly linked ($G_{AC}=0.50$, via small $h_3$). &ensp; Shock at $A$ propagates most to $B$.
-</div>
-
 <aside class="notes">
 <p>
 Now let me unpack that network term kappa*G from earlier.
@@ -969,8 +936,8 @@ The explicit calculation: G<sub>AB</sub> comes from the only bank that overlaps 
 </section>
 </section>
 <section>
-<section id="slide-org811a409" class="notitle" data-transition="none">
-<h2 id="org811a409">Decomposing \(G\): second moment = covariance + mean</h2>
+<section id="slide-org7eb59af" class="notitle" data-transition="none">
+<h2 id="org7eb59af">Decomposing \(G\): second moment = covariance + mean</h2>
 <div style="display:grid; grid-template-columns:1fr 1fr; grid-template-rows:auto auto; gap:0.5em 1.5em; align-items:start;">
 
   <!-- NW: r-stack — blue formula (fragments 1-3) → diagram (fragment 4) -->
@@ -992,7 +959,7 @@ The explicit calculation: G<sub>AB</sub> comes from the only bank that overlaps 
       </ul>
     </div>
     <div class="fragment fade-in diagram-container" data-fragment-index="4" style="width:100%; background:white;">
-      <img src="./diagrams/filrouge_network_v2.svg" style="max-height:300px; max-width:100%;" alt="3-bank network example">
+      <img src="./diagrams/filrouge_network_v2.svg" style="max-height:400px; max-width:100%;" alt="3-bank network example">
     </div>
   </div>
 
@@ -1165,29 +1132,28 @@ This slide unpacks what G really is. You saw G on the previous slide as co-lendi
           <p style="font-size:0.82em; color:var(--gray); margin:0.2em 0 0;">Kern County, CA</p>
         </div>
       </div>
-      <p style="text-align:right; flex:0 0 auto; padding:0.2em 0;"><a href="#/slide-grapes-colending-appendix" style="color:var(--blue); font-size:0.7em; text-decoration:none;">More examples &rarr;</a></p>
     </div>
 
     <!-- Frame 1: Bankbar charts — origin + destination -->
-    <div class="fragment" data-fragment-index="1" style="width:100%; height:100%; display:flex; flex-direction:column;">
-      <div style="flex:1; display:flex; gap:0.8em; justify-content:center; align-items:center;">
-        <div style="text-align:center; flex:1;">
-          <img src="./figures/colending_grapes_origin_bankbar.svg"
-               style="max-width:100%; max-height:90%; object-fit:contain;" alt="Origin county bank shares">
-        </div>
-        <div style="text-align:center; flex:1;">
-          <img src="./figures/colending_grapes_dest_bankbar.svg"
-               style="max-width:95%; max-height:90%; object-fit:contain;" alt="Destination county bank shares">
-        </div>
+    <div class="fragment" data-fragment-index="1" style="width:115%; height:115%; margin-top:-1.5em; display:flex; gap:0.5em; justify-content:center; align-items:center;">
+      <div style="text-align:center; flex:1;">
+        <img src="./figures/colending_grapes_origin_bankbar.svg"
+             style="max-width:100%; max-height:95%; object-fit:contain;" alt="Origin county bank shares">
       </div>
-      <p style="text-align:right; flex:0 0 auto; padding:0.2em 0;"><a href="#/slide-bankfootprints" style="color:var(--blue); font-size:0.7em; text-decoration:none;">Bank footprints &rarr;</a></p>
+      <div style="text-align:center; flex:1;">
+        <img src="./figures/colending_grapes_dest_bankbar.svg"
+             style="max-width:100%; max-height:95%; object-fit:contain;" alt="Destination county bank shares">
+      </div>
     </div>
 
   </div>
 
-  <!-- Remark always visible below the r-stack -->
-  <div class="box remark" style="margin:0.2em 0; padding:0.3em 0.8em; flex:0 0 auto;">
-    <strong>Construction:</strong>&ensp; Total CI + agricultural bank lending (call reports) redistributed by county-level distribution of number of branches (Summary of Deposit). Date: 2023.      &ensp;<a href="#/slide-data-methodology-appendix" style="color:var(--blue); font-size:0.9em; text-decoration:none;">Methodology &rarr;</a>
+  <!-- Remark + links overlaid at bottom, on top of maps -->
+  <div style="position:absolute; bottom:0.8em; left:0; right:0; z-index:10;">
+    <div class="box remark" style="margin:0 0.5em; padding:0.3em 0.8em; background:rgba(255,255,255,0.92);">
+      <strong>Construction:</strong>&ensp; Total CI + agricultural bank lending (call reports) redistributed by county-level distribution of number of branches (Summary of Deposit). Date: 2023.
+    </div>
+    <p style="text-align:right; margin:0.1em 0.5em 0; font-size:0.7em;"><a href="#/slide-data-methodology-appendix" style="color:var(--blue); text-decoration:none;">Methodology &rarr;</a> &ensp; <a href="#/slide-grapes-colending-appendix" style="color:var(--blue); text-decoration:none;">More examples &rarr;</a></p>
   </div>
 
 </div>
@@ -1213,8 +1179,8 @@ This is the G matrix in action. The colending network is not a metaphor — it i
 </section>
 </section>
 <section>
-<section id="slide-orge8a2019" class="notitle" data-transition="none">
-<h2 id="orge8a2019">Leontief cascade</h2>
+<section id="slide-org57cc11d" class="notitle" data-transition="none">
+<h2 id="org57cc11d">Leontief cascade</h2>
 <div class="two-col" style="align-items:start; gap:1.5em;">
   <!-- LEFT: derivation chain (continues from slide 11) -->
   <div style="text-align:center;">
@@ -1271,12 +1237,6 @@ This is the G matrix in action. The colending network is not a metaphor — it i
   </div>
 </div>
 
-<div class="fragment box remark" data-fragment-index="2" style="margin-top:auto; font-size:0.88em;">
-  <strong>Sign structure:</strong>&ensp; round $n$ carries $(-\kappa)^n$. &ensp;
-  $\kappa < 0$: all rounds same sign &rarr; <span class="orange">amplification</span>. &ensp;
-  $\kappa > 0$: alternating signs &rarr; <span class="blue">shielding</span>.
-</div>
-
 <aside class="notes">
 <p>
 Now I solve M*phi = epsilon. The key step: factor M = D̃(I + κ D̃⁻¹G), so M⁻¹ separates into a cascade operator times local depth.
@@ -1302,14 +1262,18 @@ ALGEBRA: Factor M = D̃ + κG = D̃(I + κD̃⁻¹G). Invert: M⁻¹ = (I + κD�
 </section>
 </section>
 <section>
-<section id="slide-orgb358cc4" class="notitle" data-transition="none">
-<h2 id="orgb358cc4">Cascade rounds</h2>
-<div style="margin:-2.5em -0.9em -1em -0.9em; display:flex; flex-direction:column; height:calc(100% + 2.5em + 1em);">
+<section id="slide-org46b9738" class="notitle" data-transition="none">
+<h2 id="org46b9738">Cascade rounds</h2>
+<style>
+  /* Cascade slide: cancel notitle top-padding, use full section height */
+  .reveal .slides section:has(.cascade-wrap) { padding-top: 0 !important; }
+</style>
+<div class="cascade-wrap" style="margin:0 -0.5em; display:flex; flex-direction:column; height:100%;">
 <div style="display:grid; grid-template-columns:55% 45%; grid-template-rows:auto 1fr auto 1fr; gap:0 0.3em; flex:1; align-items:center;">
 
   <!-- Row 1: top panel labels -->
-  <p style="margin:0; font-size:0.85em; color:var(--gray); text-align:center;">Network &ensp;($\theta_h B_h$, $K_x$)</p>
-  <p style="margin:0; font-size:0.85em; color:var(--gray); text-align:center;">Leverage &ensp;$\delta\theta_h$ (%)</p>
+  <p style="margin:0; padding:0; font-size:0.75em; line-height:1; color:var(--gray); text-align:center;">Network &ensp;($\theta_h B_h$, $K_x$)</p>
+  <p style="margin:0; padding:0; font-size:0.75em; line-height:1; color:var(--gray); text-align:center;">Leverage &ensp;$\delta\theta_h$ (%)</p>
 
   <!-- ═══ NW: network diagram (12 states) ═══ -->
   <div class="r-stack" style="text-align:center;">
@@ -1344,8 +1308,8 @@ ALGEBRA: Factor M = D̃ + κG = D̃(I + κD̃⁻¹G). Invert: M⁻¹ = (I + κD�
   </div>
 
   <!-- Row 3: bottom panel labels -->
-  <p style="margin:0; font-size:0.85em; color:var(--gray); text-align:center;">Pass-through &ensp;$\delta\tilde\mu_x / \varepsilon$ (%)</p>
-  <p style="margin:0; font-size:0.85em; color:var(--gray); text-align:center;">Capital &ensp;$\delta K_x / K_x^{FB}$ (%)</p>
+  <p style="margin:0; padding:0; font-size:0.75em; line-height:1; color:var(--gray); text-align:center;">Pass-through &ensp;$\delta\tilde\mu_x / \varepsilon$ (%)</p>
+  <p style="margin:0; padding:0; font-size:0.75em; line-height:1; color:var(--gray); text-align:center;">Capital &ensp;$\delta K_x / K_x^{FB}$ (%)</p>
 
   <!-- ═══ SW: spreads δμ_x ═══ -->
   <div class="r-stack" style="text-align:center;">
@@ -1382,7 +1346,7 @@ ALGEBRA: Factor M = D̃ + κG = D̃(I + κD̃⁻¹G). Invert: M⁻¹ = (I + κD�
 </div>
 
 <!-- ═══ Caption (synchronized, 12 states) ═══ -->
-<div class="r-stack" style="text-align:center; flex:0 0 auto; padding:0.2em 0; font-size:1.05em; font-weight:600;">
+<div class="r-stack" style="text-align:center; flex:0 0 auto; padding:0; font-size:0.9em; font-weight:600; line-height:1.2;">
   <p class="fragment fade-out" data-fragment-index="1" style="margin:0;">
      100% demand shock to $A$, &ensp;$\gamma=1$, &ensp;$\lambda=2$, &ensp;<span style="color:var(--orange);">$\kappa=-0.5$</span></p>
   <p class="fragment fade-in-then-out" data-fragment-index="1" style="margin:0; color:var(--orange);">
@@ -1467,9 +1431,12 @@ Key contrast: amplify = monotone convergence (all same sign, all spreads rising)
 </section>
 </section>
 <section>
-<section id="slide-orgfdc7a32" class="notitle" data-transition="none">
-<h2 id="orgfdc7a32">Shield vs. Amplify</h2>
-<div style="margin:-2.5em -0.9em -1em -0.9em; display:flex; flex-direction:column; height:calc(100% + 2.5em + 1em);">
+<section id="slide-org3c48aee" class="notitle" data-transition="none">
+<h2 id="org3c48aee">Shield vs. Amplify</h2>
+<style>
+  .reveal .slides section:has(.shield-amplify-wrap) { padding-top: 0 !important; }
+</style>
+<div class="shield-amplify-wrap" style="margin:0 -0.1em; display:flex; flex-direction:column; height:100%;">
 
 <div class="box theorem" style="margin:0 0.9em 0.3em 0.9em; font-size:0.82em; flex:0 0 auto;">
   <p class="box-title">Theorem (Propagation sign)</p>
@@ -1550,9 +1517,12 @@ PROOF (propagation sign): For redistributive ε (Σ ε<sub>x</sub> = 0), δr = 0
 <section>
 <section id="slide-grapes-shock-amplify" class="notitle" data-transition="none">
 <h2 id="grapes-shock-amplify">Amplify regime &amp;mdash; empirical</h2>
-<div style="margin:-2.5em -1.5em -1em -0.9em; display:flex; flex-direction:column; height:calc(100% + 2.5em + 1em);">
+<style>
+  .reveal .slides section:has(.empirical-shock-wrap) { overflow: visible; }
+</style>
+<div class="empirical-shock-wrap" style="margin:-2.5em -1.5em -1em -0.9em; display:flex; flex-direction:column; height:calc(100% + 2.5em + 1em);">
 
-<div style="flex:1; display:flex; gap:0.8em; justify-content:center; align-items:center;">
+<div style="flex:1; display:flex; gap:0.8em; justify-content:center; align-items:flex-end; padding-top:1.5em;">
   <div style="text-align:center; flex:1; height:100%;">
     <img src="./figures/shock_amplify_kn0.50_g1.00_grapes_origin.svg"
          style="max-width:95%; max-height:85%; object-fit:contain;" alt="Amplify shock — origin county">
@@ -1565,13 +1535,13 @@ PROOF (propagation sign): For redistributive ε (Σ ε<sub>x</sub> = 0), δr = 0
   </div>
 </div>
 
-<div style="flex:0 0 auto; text-align:center; padding:0.2em 0; font-size:0.78em; color:var(--gray); line-height:1.6;">
+<div style="flex:0 0 auto; text-align:center; padding:0.2em 0; font-size:0.88em; color:var(--gray); line-height:1.6;">
   <strong>Amplify regime</strong> &ensp;
   $\varepsilon_x = 1\%\,K_x$ &ensp;|&ensp;
   $\kappa = -0.50$ &ensp;|&ensp;
   $\gamma = 0.67$ &ensp;|&ensp;
   $\lambda = 1.33$ &ensp;|&ensp;
-  $\gamma + \lambda = 2$ &ensp; ($g_1$-normalized)<br>
+  $\gamma + \lambda = 2$ &ensp; <br>
   <a href="#/slide-data-methodology-appendix" style="color:var(--blue); text-decoration:none;">Methodology &rarr;</a>
   &ensp;
   <a href="#/slide-grapes-shock-appendix" style="color:var(--blue); text-decoration:none;">More examples &rarr;</a>
@@ -1594,9 +1564,9 @@ Compare with the no-network benchmark: the colored areas show excess impact attr
 <section>
 <section id="slide-grapes-shock-shield" class="notitle" data-transition="none">
 <h2 id="grapes-shock-shield">Shield regime &amp;mdash; empirical</h2>
-<div style="margin:-2.5em -1.5em -1em -0.9em; display:flex; flex-direction:column; height:calc(100% + 2.5em + 1em);">
+<div class="empirical-shock-wrap" style="margin:-2.5em -1.5em -1em -0.9em; display:flex; flex-direction:column; height:calc(100% + 2.5em + 1em);">
 
-<div style="flex:1; display:flex; gap:0.8em; justify-content:center; align-items:center;">
+<div style="flex:1; display:flex; gap:0.8em; justify-content:center; align-items:flex-end; padding-top:1.5em;">
   <div style="text-align:center; flex:1; height:100%;">
     <img src="./figures/shock_shield_kp0.50_g1.00_grapes_origin.svg"
          style="max-width:95%; max-height:85%; object-fit:contain;" alt="Shield shock — origin county">
@@ -1609,13 +1579,13 @@ Compare with the no-network benchmark: the colored areas show excess impact attr
   </div>
 </div>
 
-<div style="flex:0 0 auto; text-align:center; padding:0.2em 0; font-size:0.78em; color:var(--gray); line-height:1.6;">
+<div style="flex:0 0 auto; text-align:center; padding:0.2em 0; font-size:0.88em; color:var(--gray); line-height:1.6;">
   <strong>Shield regime</strong> &ensp;
   $\varepsilon_x = 1\%\,K_x$ &ensp;|&ensp;
   $\kappa = +0.50$ &ensp;|&ensp;
   $\gamma = 1.20$ &ensp;|&ensp;
   $\lambda = 0.80$ &ensp;|&ensp;
-  $\gamma + \lambda = 2$ &ensp; ($g_1$-normalized)<br>
+  $\gamma + \lambda = 2$ &ensp; <br>
   <a href="#/slide-data-methodology-appendix" style="color:var(--blue); text-decoration:none;">Methodology &rarr;</a>
   &ensp;
   <a href="#/slide-grapes-shock-appendix" style="color:var(--blue); text-decoration:none;">More examples &rarr;</a>
@@ -1636,11 +1606,14 @@ Key visual comparison: the spatial pattern is similar (same G matrix, same banks
 </section>
 </section>
 <section>
-<section id="slide-orgacf4b64" class="notitle" data-transition="none">
-<h2 id="orgacf4b64">Deadweight loss &amp; the resolution operator</h2>
-<div style="margin:-2.5em -0.9em -1em -0.9em; display:flex; flex-direction:column; height:calc(100% + 2.5em + 1em);">
+<section id="slide-orgb48701c" class="notitle" data-transition="none">
+<h2 id="orgb48701c">Deadweight loss &amp; the resolution operator</h2>
+<style>
+  .dwl-wrap > * { flex-shrink: 1 !important; }
+</style>
+<div class="dwl-wrap" style="margin:-2.5em -0.9em -1em -0.9em; display:flex; flex-direction:column; height:calc(100% + 2.5em + 1em);">
 
-<div class="two-col" style="flex:1; align-items:start; gap:1.2em; max-width:88%; margin:0 auto;">
+<div class="two-col" style="flex:0 1 auto; align-items:start; gap:1.2em; max-width:88%; margin:0 auto;">
 
   <!-- LEFT: DWL derivation chain -->
   <div style="text-align:center;">
@@ -1693,14 +1666,15 @@ Key visual comparison: the spatial pattern is similar (same G matrix, same banks
 </div><!-- /two-col -->
 
 <!-- DWL theorem: centered below both columns -->
-<div class="fragment box theorem" data-fragment-index="4" style="flex:0 0 auto; margin:-0.3em 2em 0.3em 2em; font-size:0.92em;">
+<div class="fragment box theorem" data-fragment-index="4" style="flex:0 0 auto; margin:0.5em 2em 0.3em 2em; font-size:0.92em;">
   <p class="box-title">Spectral decomposition of DWL</p>
-  <p style="text-align:center; margin:0.2em 0;">$\displaystyle\text{DWL} = \frac{1}{2}\sum_{j} r_j^2 \; a_j^2$</p>
-  <p style="margin:0.3em 0 0 0;">where:</p>
-  <ul style="margin:0.1em 0 0 0; padding-left:1.2em; list-style:none;">
-    <li>$r_j = \gamma / \mu_j$ &mdash; resolution failure on mode $j$ &ensp; ($\mu_j$: eigenvalues of $M = \tilde{D} + \kappa G$)</li>
-    <li>$a_j = v_j \cdot \varepsilon$ &mdash; shock loading on mode $j$</li>
-  </ul>
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 1.5em; align-items:center;">
+    <p style="text-align:center; margin:0.2em 0; font-size:1.1em;">$\displaystyle\text{DWL} = \frac{1}{2}\sum_{j} r_j^2 \; a_j^2$</p>
+    <ul style="margin:0; padding-left:0.5em; list-style:none; font-size:0.92em;">
+      <li>$r_j = \gamma / \mu_j$ &mdash; resolution failure on mode $j$</li>
+      <li>$a_j = v_j \cdot \varepsilon$ &mdash; shock loading on mode $j$</li>
+    </ul>
+  </div>
 </div>
 
 </div><!-- /wrapper -->
@@ -1730,8 +1704,8 @@ ALGEBRA: Start from quadratic production Y<sub>x</sub> = A<sub>x</sub> K<sub>x</
 </section>
 </section>
 <section>
-<section id="slide-orgdb5a524" class="notitle" data-transition="none">
-<h2 id="orgdb5a524">Spectral anatomy of welfare loss</h2>
+<section id="slide-orgfb86d05" class="notitle" data-transition="none">
+<h2 id="orgfb86d05">Spectral anatomy of welfare loss</h2>
 <div style="margin:-2.5em -0.9em 0em -0.9em; display:flex; flex-direction:column; height:calc(100% + 2.5em + 0em);">
 
 <h3 style="flex:0 0 auto; text-align:left; margin:0.3em 0 0.2em 0.9em;">Intuition: the homogeneous case</h3>
@@ -1743,7 +1717,7 @@ ALGEBRA: Start from quadratic production Y<sub>x</sub> = A<sub>x</sub> K<sub>x</
 </div>
 
 <!-- Figure: two-column layout — left has animated r-stack, right reveals at last step -->
-<div style="flex:1; display:flex; flex-direction:row; padding-top:1.5em; gap:0.5em;">
+<div style="flex:1; display:flex; flex-direction:row; padding-top:0.8em; gap:0.5em;">
 
   <!-- Left column: animated single-panel graph -->
   <div class="r-stack" style="flex:1; min-width:0;">
@@ -1846,7 +1820,10 @@ ALGEBRA (homogeneous case): K<sub>x</sub><sup>FB</sup> = K ∀x, so D̃ = (K+γ)
 <section>
 <section id="slide-dual-PCA" class="notitle" data-transition="none">
 <h2 id="dual-PCA">Dual PCA interpretation</h2>
-<div style="margin:-2.5em -0.9em -1em -0.9em; display:flex; flex-direction:column; height:calc(100% + 2.5em + 1em);">
+<style>
+  .dual-wrap > * { flex-shrink: 1 !important; }
+</style>
+<div class="dual-wrap" style="margin:-2.5em -0.9em -1em -0.9em; display:flex; flex-direction:column; height:calc(100% + 2.5em + 1em);">
 
 <h3 style="flex:0 0 auto; text-align:center; margin:0.3em 0 0.1em 0;">Dual reading of $G = W^\top D_B W$</h3>
 
@@ -1855,7 +1832,7 @@ ALGEBRA (homogeneous case): K<sub>x</sub><sup>FB</sup> = K ∀x, so D̃ = (K+γ)
 </p>
 
 <!-- Rosetta table -->
-<div style="flex:1; display:flex; align-items:flex-start; justify-content:center; padding-top:0.3em;">
+<div style="flex:0 1 auto; display:flex; align-items:flex-start; justify-content:center; padding-top:0.3em;">
 <table style="font-size:0.82em; width:92%;">
 <thead>
 <tr>
@@ -1905,7 +1882,7 @@ ALGEBRA (homogeneous case): K<sub>x</sub><sup>FB</sup> = K ∀x, so D̃ = (K+γ)
 </div>
 
 <!-- Formula: pinned below figure -->
-<div style="flex:0 0 auto; text-align:center; font-size:1.1em; padding:0.2em 0;">
+<div style="flex:0 0 auto; text-align:center; font-size:1.1em; margin-top:-0.8em; padding:0.2em 0;">
   $$g_j \;=\;v_j^\top G\, v_j\;=\; \underbrace{\sum_{x,y} v_{j,x} v_{j,y} G_{x,y}}_{\text{community cohesion}} \quad | \quad g_j \;=\; \underbrace{v_j^\top \operatorname{Cov}_B(W)\, v_j}_{\alpha_j:\;\text{how banks differ}} \;+\; \underbrace{B_{\text{tot}}\,(v_j \cdot \bar{w})^2}_{\beta_j:\;\text{what they all do}}$$
 </div>
 
@@ -2220,7 +2197,7 @@ Mode 5. g<sub>5</sub>/g<sub>1</sub> = [XX]%. [Describe the geographic partition 
   <div style="display:flex; flex-direction:column; gap:0.4em; height:100%;">
     <div style="flex:1; display:flex; align-items:center; justify-content:center;">
       <img src="./figures/gallery_G_15_loading.svg"
-           style="max-width:100%; max-height:100%; object-fit:contain;" alt="Mode 15 location loadings">
+           style="max-width:130%; max-height:130%; object-fit:contain;" alt="Mode 15 location loadings">
     </div>
     <div style="flex:1; display:flex; align-items:center; justify-content:center;">
       <img src="./figures/gallery_G_15_bankbar.svg"
@@ -2292,8 +2269,8 @@ TRANSITION: "The eigenvalue spectrum tells us the US banking system has both wel
 </section>
 </section>
 <section>
-<section id="slide-org37adddc" class="title-as-text" data-transition="none">
-<h2 id="org37adddc">The form of integration matters</h2>
+<section id="slide-orgc102bec" class="title-as-text" data-transition="none">
+<h2 id="orgc102bec">The form of integration matters</h2>
 <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.5em; align-items:center;">
   <div>
     <ol style="font-size:0.92em;">
@@ -2341,8 +2318,8 @@ The policy implication: not "more integration" or "less integration" — the com
 </section>
 </section>
 <section>
-<section id="slide-org7f01282" data-transition="none">
-<h2 id="org7f01282">Open directions</h2>
+<section id="slide-org04ed142" data-transition="none">
+<h2 id="org04ed142">Open directions</h2>
 <div class="two-col">
   <div>
     <h3>Empirics</h3>
@@ -2460,7 +2437,7 @@ Thank you.
 <h2 id="data-methodology-appendix">Data &amp; Methodology</h2>
 <div style="margin:-2.5em -0.9em -1em -0.9em; display:flex; flex-direction:column; height:calc(100% + 2.5em + 1em);">
 
-<h3 style="margin:0 0 0.3em 0;">Data &amp; Methodology</h3>
+<h3 style="margin:0.3em 0 0.3em 0;">Data &amp; Methodology</h3>
 
 <div style="flex:1; display:flex; gap:1.2em; align-items:start; overflow-y:auto;">
 
@@ -2486,14 +2463,6 @@ Thank you.
       </ol>
     </div>
 
-    <div class="box" style="border-left-color:var(--green); background:rgba(27,120,55,0.04); font-size:0.82em; margin-top:0.4em;">
-      <p class="box-title" style="color:var(--green);">Final sample</p>
-      <table style="font-size:0.95em; width:100%;">
-        <tr><td>Banks (post-BHC aggregation)</td><td style="text-align:right;"><strong>3,918</strong></td></tr>
-        <tr><td>Counties</td><td style="text-align:right;"><strong>3,139</strong></td></tr>
-        <tr><td>Total deposits</td><td style="text-align:right;"><strong>$17.8 T</strong></td></tr>
-      </table>
-    </div>
   </div>
 
   <!-- RIGHT (45%): Constructing W, B, G -->
@@ -2517,25 +2486,13 @@ Thank you.
       </p>
     </div>
 
-    <div class="box" style="border-left-color:var(--teal); background:rgba(0,128,128,0.04); font-size:0.82em; margin-top:0.4em;">
-      <p class="box-title" style="color:var(--teal);">Co-lending operator $G$</p>
-      <p style="margin:0.2em 0; line-height:1.5;">
-        $G = W^\top D_B\, W$ &ensp; where $D_B = \operatorname{diag}(B_h)$
-      </p>
-      <p style="margin:0.2em 0; font-size:0.92em; line-height:1.5;">
-        $G$ is $L \times L$ (counties), symmetric, PSD by construction.<br>
-        $K_x = [W^\top B]_x = $ first-best lending capital per county.<br>
-        Identity: $G \cdot \mathbf{1} = K$.
-      </p>
-    </div>
-
-    <div class="box" style="border-left-color:var(--red); background:#fbeef0; font-size:0.82em; margin-top:0.4em;">
-      <p class="box-title" style="color:var(--red);">Shock propagation</p>
-      <p style="margin:0.2em 0; line-height:1.5;">
-        $\phi = M^{-1}\varepsilon$, &ensp; $M = \operatorname{diag}(K + \gamma) + \kappa\, G$<br>
-        Shock: $\varepsilon_x = 0.01 \times K_x$ (1% of county capital).<br>
-        $\kappa = +0.50$ (shield) &ensp;|&ensp; $\kappa = -0.50$ (amplify).
-      </p>
+    <div class="box" style="border-left-color:var(--green); background:rgba(27,120,55,0.04); font-size:0.82em; margin-top:0.4em;">
+      <p class="box-title" style="color:var(--green);">Final sample</p>
+      <table style="font-size:0.95em; width:100%;">
+        <tr><td>Banks (post-BHC aggregation)</td><td style="text-align:right;"><strong>3,918</strong></td></tr>
+        <tr><td>Counties</td><td style="text-align:right;"><strong>3,139</strong></td></tr>
+        <tr><td>Total deposits</td><td style="text-align:right;"><strong>$17.8 T</strong></td></tr>
+      </table>
     </div>
 
   </div>
@@ -2583,7 +2540,7 @@ SHOCK PROPAGATION. The Leontief system M phi = epsilon inverts a matrix M that c
 <h2 id="spectral-methodology-appendix">Spectral Methodology</h2>
 <div style="margin:-2.5em -0.9em -1em -0.9em; display:flex; flex-direction:column; height:calc(100% + 2.5em + 1em);">
 
-<h3 style="margin:0 0 0.3em 0;">Spectral Methodology</h3>
+<h3 style="margin:0.3em 0 0.3em 0;">Spectral Methodology</h3>
 
 <div style="flex:1; display:flex; gap:1.2em; align-items:start; overflow-y:auto;">
 
@@ -2610,7 +2567,7 @@ SHOCK PROPAGATION. The Leontief system M phi = epsilon inverts a matrix M that c
         $v_j^{\text{display}}(x) = \operatorname{sign}\!\big(v_j(x)\big)\;\ln\!\big(1000\,|v_j(x)| + 1\big)$
       </p>
       <p style="margin:0.2em 0; font-size:0.92em; color:var(--gray); line-height:1.5;">
-        Diverging scale: teal ($v > 0$) &harr; brown ($v < 0$). Limits: $\pm\ln(1001)$.
+        Diverging scale: teal ($v > 0$) &harr; brown ($v < 0$). 
       </p>
     </div>
 
@@ -2618,8 +2575,7 @@ SHOCK PROPAGATION. The Leontief system M phi = epsilon inverts a matrix M that c
       <p class="box-title" style="color:var(--green);">Top-10 loading bars</p>
       <p style="margin:0.2em 0; line-height:1.5;">
         Counties ranked by $v_j(x)^2$. Bar length is the raw eigenvector entry $v_j(x)$, displayed as a percentage
-        (e.g.&nbsp;0.05 &rarr; &ldquo;5.0%&rdquo;). Since $\|v_j\|=1$, the entries are naturally in $[-1,1]$.
-        Bar direction and color mirror the map: right/teal for positive, left/brown for negative.
+        (e.g.&nbsp;0.05 &rarr; &ldquo;5.0%&rdquo;), normalized by $\|v_j\|.$ Entries are naturally in $[-1,1]$.
       </p>
     </div>
 
@@ -2724,7 +2680,7 @@ Network reading: alpha<sub>j</sub> is where the community structure lives. High 
 <h2 id="grapes-colending-appendix">Colending examples</h2>
 <div style="margin:-2.5em -0.9em -1em -0.9em; display:flex; flex-direction:column; height:calc(100% + 2.5em + 1em);">
 
-<h3 style="margin:0 0 0.3em 0;">Colending maps &mdash; additional examples</h3>
+<h3 style="margin:0.3em 0 0.3em 0;">Colending maps &mdash; additional examples</h3>
 
 <!-- Row 1: Manhattan + LA -->
 <div style="flex:1; display:flex; gap:0.8em; justify-content:center; align-items:center;">
@@ -2760,7 +2716,7 @@ Network reading: alpha<sub>j</sub> is where the community structure lives. High 
 <h2 id="grapes-shock-appendix">Shock examples</h2>
 <div style="margin:-2.5em -0.9em -1em -0.9em; display:flex; flex-direction:column; height:calc(100% + 2.5em + 1em);">
 
-<h3 style="margin:0 0 0.3em 0;">Shock maps &mdash; additional examples</h3>
+<h3 style="margin:0.3em 0 0.3em 0;">Shock maps &mdash; additional examples</h3>
 
 <!-- Row 1: Manhattan amplify / shield -->
 <div style="flex:1; display:flex; gap:0.8em; justify-content:center; align-items:center;">
@@ -2814,6 +2770,69 @@ Network reading: alpha<sub>j</sub> is where the community structure lives. High 
 </div>
 </section>
 </section>
+<section>
+<section id="slide-linearization-appendix" data-transition="none">
+<h2 id="linearization-appendix">Linearization derivation: capital clearing</h2>
+<p style="margin-bottom:0.2em; font-size:0.82em; color:#888;">Linearize around $\Phi^* = \mathbf{1}$ &ensp;|&ensp; $\Phi_x = 1 + \phi_x$ &ensp;|&ensp; <a href="#/slide-linearization" style="color:#888; text-decoration:underline;">&larr; Back</a></p>
+
+<p style="font-weight:600; color:var(--red); margin-bottom:0.2em; font-size:0.95em;">Capital clearing: &ensp; <span style="font-weight:400;">$\sum_h B_h \;\theta_h(\Phi)\;\bar{W}_{hx}\;\Phi_x / Z_h \;=\; A_x - r - \gamma \log \Phi_x$</span></p>
+
+<div class="two-col" style="gap:1.2em; align-items:start; font-size:0.88em;">
+  <div>
+    <p style="margin:0.2em 0; color:var(--red);">$\big\downarrow$ <span style="color:#888; font-size:0.75em;">expand each factor</span></p>
+    <div style="margin:0.2em 0.5em; line-height:1.7;">
+      $Z_h = \sum_x \bar{W}_{hx}\Phi_x = 1 + (\bar{W}\phi)_h$<br>
+      $\log Z_h \approx (\bar{W}\phi)_h$ &ensp; $\Rightarrow$ &ensp; $V_h = \gamma\,(\bar{W}\phi)_h$<br>
+      $\theta_h = 1 + V_h/\lambda = 1 + \tfrac{\gamma}{\lambda}(\bar{W}\phi)_h$<br>
+      $\Phi_x / Z_h \approx 1 + \phi_x - (\bar{W}\phi)_h$
+    </div>
+    <p style="margin:0.3em 0; color:var(--red);">$\big\downarrow$ <span style="color:#888; font-size:0.75em;">multiply</span></p>
+    <p style="margin:0.2em 0;">$\theta_h \cdot \Phi_x/Z_h \approx 1 + \phi_x + \underbrace{\big(\tfrac{\gamma}{\lambda} - 1\big)}_{\kappa}(\bar{W}\phi)_h$</p>
+  </div>
+  <div>
+    <p style="margin:0.2em 0; color:var(--red);">$\big\downarrow$ <span style="color:#888; font-size:0.75em;">capital supply = demand</span></p>
+    <div style="margin:0.2em 0; line-height:1.6;">
+      Supply: $\;{\color{#4A90D9}{\sum_h B_h \bar{W}_{hx}}}\big[1 + \phi_x + \kappa(\bar{W}\phi)_h\big]$<br>
+      Demand: $\;A_x + \varepsilon_x - r - \delta r - \gamma\phi_x$
+    </div>
+    <p style="margin:0.3em 0; color:var(--red);">$\big\downarrow$ <span style="color:#888; font-size:0.75em;">zeroth order cancels: ${\color{#4A90D9}{\sum_h B_h \bar{W}_{hx}}} = A_x - r$</span></p>
+    <p style="margin:0.2em 0;">$\Big[\,{\color{#4A90D9}{\sum_h B_h \bar{W}_{hx}}} + \gamma\Big]\phi_x + {\color{#9B59B6}{\kappa}}{\color{#E8830C}{\sum_y \Big(\sum_h B_h \bar{W}_{hx}\bar{W}_{hy}\Big) \phi_y}} = \varepsilon_x - \delta r$</p>
+    <p style="margin:0.3em 0; color:var(--red);">$\big\downarrow$ <span style="color:#888; font-size:0.75em;">define <em style="color:#4A90D9;">K</em>, <em style="color:#E8830C;">G</em>, <em style="color:#9B59B6;">&kappa;</em></span></p>
+    <p style="margin:0.2em 0; font-size:1.05em;">$\big({\color{#4A90D9}{K_x^{FB}}}+\gamma\big)\phi_x + {\color{#9B59B6}{\kappa}} {\color{#E8830C}{\sum_y G_{xy}\,\phi_y}} = \varepsilon_x - \delta r$</p>
+  </div>
+</div>
+
+<p style="margin:0.4em 0 0 0; font-size:1.1em; padding:0.4em; border:2px solid var(--red); border-radius:4px; text-align:center;">$M\phi = \varepsilon - \delta r \cdot \mathbf{1}$ &emsp; where &ensp; $M = \tilde{D} + \kappa\, G$, &ensp; $\tilde{D} = \text{diag}(K^{FB}+\gamma)$</p>
+</section>
+</section>
+<section>
+<section id="slide-orgafe67e0" data-transition="none">
+<h2 id="orgafe67e0">Linearization derivation: bond clearing</h2>
+<p style="margin-bottom:0.4em; font-size:0.85em; color:#888;">Linearize around $\Phi^* = \mathbf{1}$ &ensp;|&ensp; <a href="#/slide-linearization" style="color:#888; text-decoration:underline;">&larr; Back</a></p>
+
+<p style="font-weight:600; color:var(--red); margin-bottom:0.3em; font-size:1.05em;">Bond clearing</p>
+
+<p style="margin:0.3em 0; font-size:1.05em;">$\sum_h B_h \;\frac{\gamma}{\lambda}\; \log Z_h \;=\; 0$</p>
+
+<p style="margin:0.6em 0; color:var(--red);">$\big\downarrow$ <span style="color:#888; font-size:0.75em;">expand log</span></p>
+
+<p style="margin:0.3em 0; font-size:1.05em;">$\frac{\gamma}{\lambda}\;\sum_h B_h \sum_x \bar{W}_{hx}\,\phi_x \;=\; 0$</p>
+
+<p style="margin:0.6em 0; color:var(--red);">$\big\downarrow$ <span style="color:#888; font-size:0.75em;">swap sums, recognize <em style="color:#4A90D9;">K</em></span></p>
+
+<p style="margin:0.3em 0; font-size:1.05em;">$\frac{\gamma}{\lambda}\;\sum_x \underbrace{{\color{#4A90D9}{\sum_h B_h\, \bar{W}_{hx}}}}_{K_x^{FB}}\, \phi_x \;=\; 0$</p>
+
+<p style="margin:0.6em 0; color:var(--red);">$\big\downarrow$</p>
+
+<p style="margin:0.4em 0 0 0; font-size:1.2em; padding:0.4em; border:2px solid var(--red); border-radius:4px; text-align:center;">$({\color{#4A90D9}{K^{FB}}})^\top \phi = 0$</p>
+
+<div style="margin-top:1.2em; font-size:0.95em;">
+  <div class="box remark" style="padding:0.4em 0.8em;">
+    <strong>Interpretation:</strong>&ensp; Deviations $\phi$ must be orthogonal to first-best capital $K^{FB}$. &ensp; Capital-weighted average wedge is zero &mdash; no aggregate mispricing, only reallocation.
+  </div>
+</div>
+</section>
+</section>
 </div>
 </div>
 <script src="./reveal.js/js/reveal.js"></script>
@@ -2822,7 +2841,7 @@ Network reading: alpha<sub>j</sub> is where the community structure lives. High 
 // Full list of configuration options available here:
 // https://github.com/hakimel/reveal.js#configuration
 Reveal.initialize({
-hash:true, slideNumber:'c/t', transition:'none', width:1920, height:1080, margin:0.06, center:false,
+hash:true, slideNumber:'c/t', transition:'none', width:1920, height:1080, margin:0, center:false,
 
 // Optional libraries used to extend on reveal.js
 dependencies: [
